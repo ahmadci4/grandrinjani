@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta Tags SEO Super -->
+    <title>Grand Rinjani | Premium Mount Rinjani Trekking Packages</title>
+    <meta name="description"
+        content="Penyedia layanan Trekking Gunung Rinjani profesional. Paket Eksklusif 2D1N, 3D2N, transport Lombok, dan panduan pendakian lengkap. Booking sekarang!">
+    <meta name="keywords"
+        content="Rinjani Trekking, Paket Pendakian Rinjani, Rinjani Tour, Transport Lombok, Senaru, Sembalun, Tour Keliling Lombok, Gili Trawangan, Pantai Pink">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Poppins (Body) & Orbitron (Futuristic Heading) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Konfigurasi Tailwind Kustom -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        futuristic: ['Orbitron', 'sans-serif'] // Futuristic font setup
+                    },
+                    colors: {
+                        'rinjani-dark': '#0a0f16',
+                        'rinjani-card': '#111827',
+                        'rinjani-green': '#0f4c3a',
+                        'rinjani-gold': '#d4af37',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS Tambahan -->
+    <style>
+        body {
+            background-color: #0a0f16;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+
+        .glass-bg {
+            background: rgba(10, 15, 22, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Cursor Mengetik */
+        .typewriter {
+            border-right: 4px solid #d4af37;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .typing-cursor {
+            border-right: 3px solid #d4af37;
+            animation: blink 0.75s step-end infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        /* Reveal Animation on Scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0a0f16;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #d4af37;
+            border-radius: 10px;
+        }
+
+        /* EFEK FUTURISTIK CARD: Sweeping Light */
+        .card-sweep {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-sweep::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.4), transparent);
+            transform: skewX(-25deg);
+            animation: sweep 5s infinite;
+            z-index: 20;
+            pointer-events: none;
+        }
+
+        @keyframes sweep {
+            0% {
+                left: -150%;
+            }
+
+            20%,
+            100% {
+                left: 250%;
+            }
+        }
+
+        /* EFEK FUTURISTIK CARD: Premium Glow Border */
+        .premium-glow {
+            animation: pulse-glow 3s infinite alternate;
+            transition: all 0.3s ease;
+        }
+
+        .premium-glow:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.8) !important;
+        }
+
+        @keyframes pulse-glow {
+            0% {
+                box-shadow: 0 0 5px rgba(212, 175, 55, 0.2), inset 0 0 2px rgba(212, 175, 55, 0.1);
+                border-color: rgba(212, 175, 55, 0.3);
+            }
+
+            100% {
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.5), inset 0 0 10px rgba(212, 175, 55, 0.2);
+                border-color: rgba(212, 175, 55, 0.8);
+            }
+        }
+
+        /* Latar Belakang Hutan Redup Global */
+        .forest-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('images/rinjani16.jpeg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.05;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* MDPL Tracker (Dipindah ke kiri sangat tipis agar tak tabrakan dengan WA) */
+        .mdpl-tracker {
+            position: fixed;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 50vh;
+            width: 3px;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 40;
+            border-radius: 4px;
+        }
+
+        .mdpl-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #d4af37;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+            transition: height 0.1s ease-out;
+        }
+
+        .mdpl-text {
+            position: absolute;
+            left: 10px;
+            transform: translateY(50%);
+            font-weight: bold;
+            color: #d4af37;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+            transition: bottom 0.1s ease-out;
+            white-space: nowrap;
+            font-size: 10px;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Floating Nav Animations */
+        @keyframes slideInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .nav-float-item {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        .nav-float-item.show {
+            animation: slideInRight 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        .nav-float-tooltip {
+            position: absolute;
+            right: 65px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(10, 15, 22, 0.95);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: bold;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+            border: 1px solid #d4af37;
+            color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-float-item:hover .nav-float-tooltip {
+            opacity: 1;
+        }
+
+        /* Multi-Chat Menu Animation */
+        .chat-menu-item {
+            opacity: 0;
+            transform: translateY(20px) scale(0.8);
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -24px;
+            /* Center 48px width icon */
+        }
+
+        .chat-menu-open .chat-menu-item {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        .chat-menu-open .chat-item-1 {
+            bottom: 70px;
+            transition-delay: 0.05s;
+        }
+
+        .chat-menu-open .chat-item-2 {
+            bottom: 130px;
+            transition-delay: 0.1s;
+        }
+
+        .chat-menu-open .chat-item-3 {
+            bottom: 190px;
+            transition-delay: 0.15s;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+        }
+
+        /* Instagram Button Gradient */
+        .ig-gradient {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+    </style>
+</head>
+
+<body class="antialiased relative">
+
+    <!-- AUDIO PLAYER -->
+    <audio id="bg-audio" loop>
+        <source src="images/bg-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Latar Belakang Hutan Transparan -->
+    <div class="forest-bg"></div>
+
+    <!-- MDPL SCROLL TRACKER -->
+    <div class="mdpl-tracker hidden md:block">
+        <div id="mdpl-bar" class="mdpl-progress" style="height: 0%;"></div>
+        <div id="mdpl-number" class="mdpl-text" style="bottom: 0%;">0 mdpl</div>
+    </div>
+
+    <!-- TOP-LEFT NAVBAR LOGO (Muncul Saat Scroll) -->
+    <header class="fixed top-0 left-0 w-full z-50 pointer-events-none p-5 md:p-8">
+        <a href="#" id="nav-logo"
+            class="inline-flex items-center gap-2 text-white opacity-0 transition-opacity duration-700 pointer-events-auto group">
+            <svg class="w-8 h-8 text-rinjani-gold transform group-hover:scale-110 transition drop-shadow-[0_0_10px_rgba(212,175,55,0.8)]"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 18L12 11L16 18M3 21L12 5L21 21" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <div class="text-xl md:text-2xl font-futuristic font-extrabold tracking-widest drop-shadow-lg flex">
+                <span id="animated-logo-text" class="text-white"></span>
+                <span class="text-rinjani-gold ml-1"></span>
+            </div>
+        </a>
+    </header>
+
+    <!-- FLOATING RIGHT NAVBAR -->
+    <nav class="fixed right-4 top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-4 pointer-events-auto"
+        id="floating-nav">
+        <!-- Item 1: Packages -->
+        <a href="#packages"
+            class="nav-float-item glass-bg w-12 h-12 rounded-full text-white hover:bg-rinjani-gold hover:text-black transition flex items-center justify-center group relative shadow-lg">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 18L12 11L16 18M3 21L12 5L21 21" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="nav-float-tooltip">PAKET RINJANI</span>
+        </a>
+
+        <!-- Item 2: Surga Tersembunyi -->
+        <a href="#hidden-paradise"
+            class="nav-float-item glass-bg w-12 h-12 rounded-full text-white hover:bg-green-500 hover:text-black transition flex items-center justify-center group relative shadow-lg">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+            </svg>
+            <span class="nav-float-tooltip text-green-400 border-green-500">EKSPLORASI LOMBOK</span>
+        </a>
+
+        <!-- Item 3: Persiapan/Kalkulator (IKON AI CHIP) -->
+        <a href="#calculator"
+            class="nav-float-item glass-bg w-12 h-12 rounded-full text-white hover:bg-blue-400 hover:text-black transition flex items-center justify-center group relative shadow-lg">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                <rect x="9" y="9" width="6" height="6"></rect>
+                <line x1="9" y1="1" x2="9" y2="4"></line>
+                <line x1="15" y1="1" x2="15" y2="4"></line>
+                <line x1="9" y1="20" x2="9" y2="23"></line>
+                <line x1="15" y1="20" x2="15" y2="23"></line>
+                <line x1="20" y1="9" x2="23" y2="9"></line>
+                <line x1="20" y1="14" x2="23" y2="14"></line>
+                <line x1="1" y1="9" x2="4" y2="9"></line>
+                <line x1="1" y1="14" x2="4" y2="14"></line>
+            </svg>
+            <span class="nav-float-tooltip text-blue-400 border-blue-400">AI ASSISTANT</span>
+        </a>
+
+        <!-- Item 4: Bahasa Dropdown (IKON TERJEMAHAN) -->
+        <div class="nav-float-item relative group cursor-pointer">
+            <div
+                class="glass-bg w-12 h-12 rounded-full text-white group-hover:bg-purple-500 group-hover:text-black transition flex items-center justify-center shadow-lg">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 8l6 6"></path>
+                    <path d="M4 14l6-6 2-3"></path>
+                    <path d="M2 5h12"></path>
+                    <path d="M7 2h1"></path>
+                    <path d="M22 22l-5-10-5 10"></path>
+                    <path d="M14 18h6"></path>
+                </svg>
+            </div>
+            <span class="nav-float-tooltip group-hover:opacity-0">BAHASA</span>
+
+            <!-- Dropdown Menu Box -->
+            <div
+                class="absolute right-16 top-1/2 transform -translate-y-1/2 w-40 glass-bg border border-gray-800 text-white rounded-lg shadow-2xl opacity-0 transition-opacity duration-300 invisible group-hover:opacity-100 group-hover:visible z-50 max-h-64 overflow-y-auto no-scrollbar pointer-events-auto">
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold rounded-t-lg">🇮🇩
+                    Indonesia</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold">🇲🇾 Malaysia</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold">🇬🇧 Inggris</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold">🇯🇵 Jepang</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold">🇨🇳 Mandarin</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold">🇭🇰 Hongkong</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold">🇸🇦 Arab</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold">🇩🇪 Jerman</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold">🇵🇹 Portugis</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold rounded-b-lg">🇮🇳
+                    India</a>
+            </div>
+        </div>
+
+        <!-- Item 5: Book Now -->
+        <a href="#booking"
+            class="nav-float-item bg-rinjani-gold w-12 h-12 rounded-full text-black hover:bg-yellow-400 hover:scale-110 transition flex items-center justify-center group relative shadow-[0_0_20px_rgba(212,175,55,0.6)]">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+            <span class="nav-float-tooltip bg-rinjani-gold text-black border-yellow-400">BOOK NOW</span>
+        </a>
+    </nav>
+
+    <!-- FLOATING CHAT MULTI-PLATFORM (KIRI BAWAH) -->
+    <div id="floating-chat-container" class="fixed bottom-6 left-6 z-50">
+        <!-- Sub Menu Items (WhatsApp, WeChat, Email) -->
+        <a href="https://wa.me/6285956684081" target="_blank"
+            class="chat-menu-item chat-item-1 w-12 h-12 bg-[#25D366] text-white rounded-full shadow-[0_0_15px_rgba(37,211,102,0.5)] flex items-center justify-center hover:scale-110 transition-transform group">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.161.453-.834.864-1.161.905-.333.041-.652.146-2.091-.453-1.745-.722-2.853-2.484-2.937-2.597-.085-.113-.701-.933-.701-1.78s.445-1.266.604-1.432c.16-.165.347-.206.463-.206.115 0 .23 0 .327.005.101.005.234-.04.364.275.132.316.452 1.107.493 1.189.041.082.068.179.015.284-.052.106-.08.17-.16.27-.081.1-.17.228-.242.308-.082.091-.168.192-.066.368.102.176.456.753.978 1.221.674.605 1.24.789 1.413.874.173.085.275.074.38-.046.103-.12.448-.521.57-.699.122-.179.243-.148.404-.087.16.061 1.017.479 1.192.567.174.088.291.134.333.208.042.074.042.431-.119.884zM12 2C6.477 2 2 6.477 2 12c0 1.763.456 3.418 1.264 4.868L2 22l5.293-1.218C8.687 21.558 10.297 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.25c-1.464 0-2.883-.377-4.148-1.09l-.297-.168-3.086.71.722-3.003-.185-.306C4.381 14.957 4 13.518 4 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z" />
+            </svg>
+            <div
+                class="absolute left-14 bg-white text-black text-xs font-bold px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg pointer-events-none">
+                WhatsApp</div>
+        </a>
+
+        <a href="#" onclick="alert('WeChat ID: GrandRinjaniTour')"
+            class="chat-menu-item chat-item-2 w-12 h-12 bg-[#07C160] text-white rounded-full shadow-[0_0_15px_rgba(7,193,96,0.5)] flex items-center justify-center hover:scale-110 transition-transform group">
+            <!-- WeChat Icon SVG -->
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M8.5 14C5.5 14 3 11.5 3 8.5S5.5 3 8.5 3 14 5.5 14 8.5c0 .5-.1 1-.2 1.5.3 0 .7.1 1 .1 3.3 0 6-2.7 6-6S18.3 0 15 0 9 2.7 9 6c0 .4 0 .8.1 1.2C8.8 7.1 8.7 7.1 8.5 7.1 4.9 7.1 2 10 2 13.6c0 1.9.9 3.7 2.4 4.9l-.8 2.5 2.7-1.4c.7.2 1.4.3 2.2.3.2 0 .4 0 .6-.1-.1-.3-.1-.7-.1-1 0-2.6 2.1-4.8 4.8-4.8zM6.5 6C7 6 7.4 6.4 7.4 6.9S7 7.8 6.5 7.8 5.6 7.4 5.6 6.9 6 6 6.5 6zm4.5 0c.5 0 .9.4.9.9s-.4.9-.9.9-.9-.4-.9-.9.4-.9.9-.9zm5.5 8c0 2.2-1.8 4-4 4-.6 0-1.1-.1-1.6-.3l-2.1 1.1.6-1.9C8 16 7.2 14.5 7.2 13c0-2.2 1.8-4 4-4s4 1.8 4 4zm-5.5-1.2c-.4 0-.7.3-.7.7s.3.7.7.7.7-.3.7-.7-.3-.7-.7-.7zm3.5 0c-.4 0-.7.3-.7.7s.3.7.7.7.7-.3.7-.7-.3-.7-.7-.7z" />
+            </svg>
+            <div
+                class="absolute left-14 bg-white text-black text-xs font-bold px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg pointer-events-none">
+                WeChat</div>
+        </a>
+
+        <a href="mailto:info@grandrinjani.com"
+            class="chat-menu-item chat-item-3 w-12 h-12 bg-[#EA4335] text-white rounded-full shadow-[0_0_15px_rgba(234,67,53,0.5)] flex items-center justify-center hover:scale-110 transition-transform group">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                </path>
+            </svg>
+            <div
+                class="absolute left-14 bg-white text-black text-xs font-bold px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg pointer-events-none">
+                Email</div>
+        </a>
+
+        <!-- Main Toggle Button -->
+        <button onclick="toggleChatMenu()"
+            class="relative z-20 bg-rinjani-gold text-black w-14 h-14 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.6)] hover:scale-110 transition-transform duration-300 flex items-center justify-center premium-glow">
+            <!-- Icon Chat Buble -->
+            <svg id="chat-icon-main" class="w-7 h-7 transition-opacity duration-300" fill="none" stroke="currentColor"
+                stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                </path>
+            </svg>
+            <!-- Icon Close (Hidden by default) -->
+            <svg id="chat-icon-close"
+                class="w-7 h-7 absolute opacity-0 transition-opacity duration-300 transform scale-50" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- TOMBOL MUSIK -->
+    <button id="music-toggle-btn"
+        class="fixed top-6 right-6 z-[60] bg-rinjani-gold text-black p-3 rounded-full shadow-[0_0_20px_rgba(212,175,55,0.6)] hover:bg-yellow-400 transition flex items-center justify-center group"
+        onclick="toggleAudio()">
+        <svg id="music-icon" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M9 18c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3zm12-15v11.838c-1.353-.518-2.85-.838-4.5-.838-1.65 0-3.147.32-4.5.838v-8.838l9-3zm-9 19c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3zm9-3c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z" />
+        </svg>
+        <span
+            class="absolute right-14 bg-white text-black text-xs font-bold px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition whitespace-nowrap shadow-lg border border-gray-200 pointer-events-none">Play/Pause</span>
+    </button>
+
+    <!-- HERO SECTION -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden bg-black">
+        <div class="absolute inset-0 z-0">
+            <!-- Video background lokal -->
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                <source src="images/video-bg.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-rinjani-dark z-10"></div>
+        </div>
+
+        <div class="relative z-20 w-full h-full flex flex-col items-center justify-center px-4 max-w-5xl mx-auto mt-16">
+
+            <!-- Teks Animasi Awal -->
+            <div id="hero-text-container"
+                class="text-center transition-all duration-1000 opacity-100 transform scale-100">
+                <p
+                    class="text-rinjani-gold font-bold tracking-[0.3em] text-sm md:text-base uppercase mb-4 animate-fade-in-up font-futuristic">
+                    Professional Trekking</p>
+                <h1
+                    class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight h-32 md:h-24 font-futuristic text-white drop-shadow-2xl">
+                    <span id="typewriter-text" class="typewriter"></span>
+                </h1>
+                <p class="text-gray-300 max-w-2xl mx-auto text-lg font-light tracking-wide">
+                    Mengutamakan keamanan, peralatan standar Eropa, dan kuliner kelas atas di atas awan.
+                </p>
+            </div>
+
+            <!-- Logo Besar di Tengah (Muncul setelah Teks Selesai) -->
+            <div id="hero-logo-container"
+                class="absolute inset-0 flex flex-col items-center justify-center transition-all duration-1000 opacity-0 scale-50 hidden">
+                <svg class="w-32 h-32 md:w-48 md:h-48 text-rinjani-gold drop-shadow-[0_0_25px_rgba(212,175,55,0.8)] premium-glow rounded-full p-2"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M8 18L12 11L16 18M3 21L12 5L21 21" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <h2
+                    class="text-4xl md:text-7xl font-futuristic font-extrabold mt-6 tracking-[0.2em] text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]">
+                    GRAND<span class="text-rinjani-gold">RINJANI</span>
+                </h2>
+                <p
+                    class="text-rinjani-gold font-bold tracking-[0.4em] uppercase mt-4 text-sm font-futuristic bg-black/50 px-6 py-2 rounded-full border border-rinjani-gold">
+                    Premium Expedition</p>
+
+                <a href="#packages"
+                    class="mt-12 text-gray-400 hover:text-white transition flex flex-col items-center animate-bounce">
+                    <span class="text-xs uppercase tracking-widest mb-2 font-futuristic">Scroll Down</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACKAGES SECTION (GUNUNG RINJANI) -->
+    <section id="packages" class="py-24 relative border-b border-gray-800 bg-black/60 backdrop-blur-md">
+        <div class="container mx-auto px-6 md:px-12 relative z-10 md:pr-24">
+            <div class="text-center mb-16 reveal">
+                <!-- ANIMASI TYPEWRITER & FONT FUTURISTIK -->
+                <h2 class="text-rinjani-gold font-bold tracking-widest uppercase text-sm mb-2 font-futuristic auto-type-heading"
+                    data-text="TANTANGAN UTAMA"></h2>
+                <h3 class="text-4xl font-extrabold text-white font-futuristic auto-type-heading tracking-wide"
+                    data-text="PAKET RINJANI EKSKLUSIF"></h3>
+                <p class="text-gray-400 mt-4 text-sm max-w-2xl mx-auto"><span class="text-rinjani-gold">*Note:</span>
+                    Hari 0 (Kedatangan): Penjemputan di bandara/pelabuhan, diantar ke penginapan, dan briefing
+                    pendakian.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Paket 1: 2D1N -->
+                <div
+                    class="bg-rinjani-card rounded-2xl overflow-hidden border border-gray-800 transition duration-300 reveal premium-glow card-sweep flex flex-col">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="images/rinjani1.jpeg"
+                            class="w-full h-full object-cover transform hover:scale-110 transition duration-700"
+                            alt="2D1N Rinjani">
+                    </div>
+                    <div class="p-6 relative z-10 flex flex-col flex-1">
+                        <h4 class="text-2xl font-bold text-white mb-2 font-futuristic tracking-wide">2H1M PUNCAK</h4>
+                        <p class="text-gray-400 text-sm mb-4">Rute Sembalun. Fokus utama menaklukkan Puncak Rinjani
+                            (Fisik prima).</p>
+                        <div class="flex-1"></div>
+                        <div class="flex justify-between items-center border-t border-gray-700 pt-4 mt-4">
+                            <div><span class="text-2xl font-bold text-rinjani-gold">$220</span></div>
+                            <button onclick="openModal('modal-2d1n')"
+                                class="text-sm bg-gray-800 hover:bg-rinjani-gold hover:text-black px-4 py-2 rounded-lg font-bold transition font-futuristic">Itinerary</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paket 2: 3D2N -->
+                <div
+                    class="bg-rinjani-card rounded-2xl overflow-hidden border border-rinjani-gold transition duration-300 reveal transform md:-translate-y-4 shadow-[0_0_30px_rgba(212,175,55,0.1)] relative premium-glow card-sweep flex flex-col">
+                    <div
+                        class="absolute top-4 right-4 bg-rinjani-gold text-black px-3 py-1 rounded-full text-xs font-bold shadow-lg z-20 font-futuristic tracking-widest">
+                        BESTSELLER</div>
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="images/rinjani2.jpeg"
+                            class="w-full h-full object-cover transform hover:scale-110 transition duration-700"
+                            alt="3D2N Rinjani">
+                    </div>
+                    <div class="p-6 relative z-10 flex flex-col flex-1">
+                        <h4 class="text-2xl font-bold text-white mb-2 font-futuristic tracking-wide">3H2M LENGKAP</h4>
+                        <p class="text-gray-400 text-sm mb-4">Puncak, Danau Segara Anak, Air Panas Alami. Highlight
+                            terlengkap Rinjani.</p>
+                        <div class="flex-1"></div>
+                        <div class="flex justify-between items-center border-t border-gray-700 pt-4 mt-4">
+                            <div><span class="text-2xl font-bold text-rinjani-gold">$280</span></div>
+                            <button onclick="openModal('modal-3d2n')"
+                                class="text-sm bg-rinjani-gold text-black px-4 py-2 rounded-lg font-bold transition hover:bg-yellow-400 font-futuristic">Itinerary</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paket 3: 4D3N -->
+                <div
+                    class="bg-rinjani-card rounded-2xl overflow-hidden border border-gray-800 transition duration-300 reveal premium-glow card-sweep flex flex-col">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="images/rinjani3.jpeg"
+                            class="w-full h-full object-cover transform hover:scale-110 transition duration-700"
+                            alt="4D3N Rinjani">
+                    </div>
+                    <div class="p-6 relative z-10 flex flex-col flex-1">
+                        <h4 class="text-2xl font-bold text-white mb-2 font-futuristic tracking-wide">4H3M EKSPLORASI
+                        </h4>
+                        <p class="text-gray-400 text-sm mb-4">Tempo santai. Ideal untuk pemula, keluarga, & fotografer.
+                            Ekstra waktu di danau.</p>
+                        <div class="flex-1"></div>
+                        <div class="flex justify-between items-center border-t border-gray-700 pt-4 mt-4">
+                            <div><span class="text-2xl font-bold text-rinjani-gold">$350</span></div>
+                            <button onclick="openModal('modal-4d3n')"
+                                class="text-sm bg-gray-800 hover:bg-rinjani-gold hover:text-black px-4 py-2 rounded-lg font-bold transition font-futuristic">Itinerary</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SURGA TERSEMBUNYI (LOMBOK EXPLORATION) -->
+    <section id="hidden-paradise" class="py-24 relative bg-[#06090e] border-b border-gray-800">
+        <div class="container mx-auto px-6 md:px-12 relative z-10 md:pr-24">
+            <div class="text-center mb-10 reveal">
+                <h2 class="text-green-400 font-bold tracking-widest uppercase text-sm mb-2 auto-type-heading font-futuristic"
+                    data-text="PULAU LOMBOK"></h2>
+                <h3 class="text-4xl md:text-5xl font-extrabold text-white auto-type-heading font-futuristic tracking-wide"
+                    data-text="SURGA TERSEMBUNYI"></h3>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto text-sm">Selain Rinjani, Lombok menyimpan keajaiban alam
+                    dan budaya. Nikmati paket khusus kami. <br><span class="italic text-xs text-rinjani-gold">(Harga
+                        estimasi per pax untuk grup 2-4 orang)</span></p>
+            </div>
+
+            <!-- TAB MENU -->
+            <div class="flex overflow-x-auto space-x-3 mb-10 pb-4 no-scrollbar justify-start md:justify-center reveal">
+                <button onclick="openTab('tab-pantai')"
+                    class="tab-btn bg-rinjani-gold text-black font-bold py-2 px-6 rounded-full whitespace-nowrap text-sm shadow-lg transition font-futuristic">Pantai
+                    & Bahari</button>
+                <button onclick="openTab('tab-selatan')"
+                    class="tab-btn bg-gray-800 text-white font-bold py-2 px-6 rounded-full whitespace-nowrap text-sm hover:bg-gray-700 transition font-futuristic">Ikonik
+                    Selatan</button>
+                <button onclick="openTab('tab-kota')"
+                    class="tab-btn bg-gray-800 text-white font-bold py-2 px-6 rounded-full whitespace-nowrap text-sm hover:bg-gray-700 transition font-futuristic">Mataram
+                    City</button>
+                <button onclick="openTab('tab-airterjun')"
+                    class="tab-btn bg-gray-800 text-white font-bold py-2 px-6 rounded-full whitespace-nowrap text-sm hover:bg-gray-700 transition font-futuristic">Air
+                    Terjun</button>
+                <button onclick="openTab('tab-sembalun')"
+                    class="tab-btn bg-gray-800 text-white font-bold py-2 px-6 rounded-full whitespace-nowrap text-sm hover:bg-gray-700 transition font-futuristic">Sembalun</button>
+                <button onclick="openTab('tab-camping')"
+                    class="tab-btn bg-gray-800 text-white font-bold py-2 px-6 rounded-full whitespace-nowrap text-sm hover:bg-gray-700 transition font-futuristic">Soft
+                    Trekking</button>
+            </div>
+
+            <!-- TAB CONTENT 1: BAHARI & PANTAI -->
+            <div id="tab-pantai" class="tab-content grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in-up">
+                <div
+                    class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden group premium-glow card-sweep flex flex-col">
+                    <div class="h-40 w-full overflow-hidden relative z-0">
+                        <img src="images/rinjani4.jpeg"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            alt="Gili Trawangan">
+                    </div>
+                    <div class="p-6 relative z-10 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4
+                                class="text-xl font-bold text-white group-hover:text-blue-400 transition mb-2 font-futuristic">
+                                1. Eksplorasi 3 Gili</h4>
+                            <p class="text-gray-400 text-sm mb-4">Snorkeling di Trawangan, Meno, dan Air.</p>
+                            <p class="text-xs text-gray-500 mb-4"><strong class="text-gray-300">Rute:</strong> Mataram ➔
+                                Pelabuhan ➔ 3 Gili</p>
+                        </div>
+                        <div class="text-lg font-bold text-rinjani-gold font-futuristic">Rp 450rb - 800rb</div>
+                    </div>
+                </div>
+                <div
+                    class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden group premium-glow card-sweep flex flex-col">
+                    <div class="h-40 w-full overflow-hidden relative z-0">
+                        <img src="images/rinjani5.jpeg"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            alt="Pantai Pink">
+                    </div>
+                    <div class="p-6 relative z-10 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4
+                                class="text-xl font-bold text-white group-hover:text-pink-400 transition mb-2 font-futuristic">
+                                2. Pesona Pantai Pink</h4>
+                            <p class="text-gray-400 text-sm mb-4">Pulau Pasir, Gili Petelu, dan lunch Seafood.</p>
+                            <p class="text-xs text-gray-500 mb-4"><strong class="text-gray-300">Rute:</strong> Mataram ➔
+                                Tg Luar ➔ Pantai Pink</p>
+                        </div>
+                        <div class="text-lg font-bold text-rinjani-gold font-futuristic">Rp 550rb - 900rb</div>
+                    </div>
+                </div>
+                <div
+                    class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden group premium-glow card-sweep flex flex-col">
+                    <div class="h-40 w-full overflow-hidden relative z-0">
+                        <img src="images/rinjani6.jpeg"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            alt="Senggigi">
+                    </div>
+                    <div class="p-6 relative z-10 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4
+                                class="text-xl font-bold text-white group-hover:text-orange-400 transition mb-2 font-futuristic">
+                                3. Sunset Senggigi</h4>
+                            <p class="text-gray-400 text-sm mb-4">Batu Bolong, Senggigi, & Bukit Malimbu.</p>
+                            <p class="text-xs text-gray-500 mb-4"><strong class="text-gray-300">Rute:</strong> Mataram ➔
+                                Pesisir Barat Senggigi</p>
+                        </div>
+                        <div class="text-lg font-bold text-rinjani-gold font-futuristic">Rp 150rb - 300rb</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB CONTENT 2: IKONIK SELATAN -->
+            <div id="tab-selatan" class="tab-content hidden grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-up">
+                <div
+                    class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden group premium-glow card-sweep flex flex-col md:flex-row">
+                    <div class="md:w-2/5 h-48 md:h-auto overflow-hidden relative z-0">
+                        <img src="images/rinjani7.jpeg"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            alt="Mandalika">
+                    </div>
+                    <div class="p-6 relative z-10 md:w-3/5 flex flex-col justify-between">
+                        <div>
+                            <h4
+                                class="text-xl font-bold text-white group-hover:text-red-500 transition mb-2 font-futuristic">
+                                4. Mandalika & Merese</h4>
+                            <p class="text-gray-400 text-sm mb-4">Desa Tenun, Pantai Kuta, Eksklusif Sirkuit Mandalika,
+                                dan Sunset di Merese.</p>
+                            <p class="text-xs text-gray-500 mb-4"><strong class="text-gray-300">Rute:</strong> Bandara
+                                BIL ➔ Mandalika ➔ Merese</p>
+                        </div>
+                        <div class="text-lg font-bold text-rinjani-gold font-futuristic">Rp 350rb - 550rb</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB CONTENT 3: KOTA MATARAM -->
+            <div id="tab-kota" class="tab-content hidden grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-up">
+                <div
+                    class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden group premium-glow card-sweep flex flex-col md:flex-row">
+                    <div class="md:w-2/5 h-48 md:h-auto overflow-hidden relative z-0">
+                        <img src="images/rinjani8.jpeg"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            alt="Mataram City">
+                    </div>
+                    <div class="p-6 relative z-10 md:w-3/5 flex flex-col justify-between">
+                        <div>
+                            <h4
+                                class="text-xl font-bold text-white group-hover:text-yellow-500 transition mb-2 font-futuristic">
+                                5. Eksplorasi Mataram</h4>
+                            <p class="text-gray-400 text-sm mb-4">Islamic Center, Taman Narmada, Pura Lingsar, Desa
+                                Banyumulek & Sentra Mutiara.</p>
+                            <p class="text-xs text-gray-500 mb-4"><strong class="text-gray-300">Durasi:</strong>
+                                Fleksibel 4-6 jam.</p>
+                        </div>
+                        <div class="text-lg font-bold text-rinjani-gold font-futuristic">Rp 200rb - 350rb</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB CONTENT 4: AIR TERJUN -->
+            <div id="tab-airterjun" class="tab-content hidden grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-up">
+                <div
+                    class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden group premium-glow card-sweep flex flex-col">
+                    <div class="h-48 w-full overflow-hidden relative z-0">
+                        <img src="images/rinjani9.jpeg"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            alt="Sendang Gile Tiu Kelep">
+                    </div>
+                    <div class="p-6 relative z-10 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4
+                                class="text-xl font-bold text-white group-hover:text-cyan-400 transition mb-2 font-futuristic">
+                                6. Air Terjun Senaru (Sendang Gile & Tiu Kelep)</h4>
+                            <p class="text-gray-400 text-sm mb-4">Eksplorasi dua air terjun magis di kaki Rinjani
+                                (Senaru). Pas untuk trip sebelum/sesudah mendaki.</p>
+                            <p class="text-xs text-gray-500 mb-4"><strong class="text-gray-300">Rute:</strong> Mataram ➔
+                                Senaru ➔ Sendang Gile ➔ Tiu Kelep</p>
+                        </div>
+                        <div class="text-lg font-bold text-rinjani-gold font-futuristic">Rp 350rb - 500rb</div>
+                    </div>
+                </div>
+                <div
+                    class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden group premium-glow card-sweep flex flex-col">
+                    <div class="h-48 w-full overflow-hidden relative z-0">
+                        <img src="images/rinjani10.jpeg"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            alt="Benang Kelambu">
+                    </div>
+                    <div class="p-6 relative z-10 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4
+                                class="text-xl font-bold text-white group-hover:text-cyan-400 transition mb-2 font-futuristic">
+                                7. Benang Stokel & Kelambu</h4>
+                            <p class="text-gray-400 text-sm mb-4">Air mengalir langsung dari rimbunan tanaman merambat
+                                bagaikan kelambu.</p>
+                            <p class="text-xs text-gray-500 mb-4"><strong class="text-gray-300">Rute:</strong> Mataram ➔
+                                Desa Aik Berik</p>
+                        </div>
+                        <div class="text-lg font-bold text-rinjani-gold font-futuristic">Rp 300rb - 450rb</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB CONTENT 5: SEMBALUN LEISURE -->
+            <div id="tab-sembalun" class="tab-content hidden grid grid-cols-1 gap-6 animate-fade-in-up">
+                <div
+                    class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden group premium-glow card-sweep flex flex-col md:flex-row">
+                    <div class="md:w-1/2 h-56 md:h-auto overflow-hidden relative z-0">
+                        <img src="images/rinjani11.jpeg"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                            alt="Sembalun">
+                    </div>
+                    <div class="p-8 relative z-10 md:w-1/2 flex flex-col justify-between">
+                        <div>
+                            <h4
+                                class="text-2xl font-bold text-white group-hover:text-green-400 transition mb-4 font-futuristic">
+                                8. Eksplorasi Lembah Sembalun</h4>
+                            <p class="text-gray-400 text-base mb-6">Wisata santai menikmati udara pegunungan, perkebunan
+                                stroberi, kopi Arabika lokal, dan Desa Adat Beleq di ketinggian 1.100 mdpl.</p>
+                            <p class="text-sm text-gray-500 mb-6"><strong class="text-gray-300">Rute:</strong> Mataram ➔
+                                Pusuk Sembalun ➔ Petik Stroberi ➔ Bukit Selong</p>
+                        </div>
+                        <div class="text-xl font-bold text-rinjani-gold font-futuristic">Rp 400.000 - Rp 600.000</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB CONTENT 6: SOFT TREKKING -->
+            <div id="tab-camping"
+                class="tab-content hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fade-in-up">
+                <div
+                    class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden group premium-glow card-sweep flex flex-col">
+                    <div class="h-32 w-full overflow-hidden relative z-0">
+                        <img src="images/rinjani12.jpeg"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            alt="Pergasingan">
+                    </div>
+                    <div class="p-5 relative z-10 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2 font-futuristic">9. Bkt Pergasingan</h4>
+                            <p class="text-xs text-gray-400 mb-3">(1.706 mdpl) Sawah kotak-kotak berhadapan Rinjani.</p>
+                            <p class="text-xs text-gray-500 mb-3"><strong class="text-gray-300">Trek:</strong> 3-4 jam
+                            </p>
+                        </div>
+                        <div class="text-sm font-bold text-rinjani-gold font-futuristic">Rp 650rb - 1.2jt</div>
+                    </div>
+                </div>
+                <div
+                    class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden group premium-glow card-sweep flex flex-col">
+                    <div class="h-32 w-full overflow-hidden relative z-0">
+                        <img src="images/rinjani13.jpeg"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            alt="Nanggi">
+                    </div>
+                    <div class="p-5 relative z-10 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2 font-futuristic">10. Bukit Nanggi</h4>
+                            <p class="text-xs text-gray-400 mb-3">(2.300 mdpl) Lautan awan tebal di pagi hari.</p>
+                            <p class="text-xs text-gray-500 mb-3"><strong class="text-gray-300">Trek:</strong> 4-5 jam
+                            </p>
+                        </div>
+                        <div class="text-sm font-bold text-rinjani-gold font-futuristic">Rp 750rb - 1.35jt</div>
+                    </div>
+                </div>
+                <div
+                    class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden group premium-glow card-sweep flex flex-col">
+                    <div class="h-32 w-full overflow-hidden relative z-0">
+                        <img src="images/rinjani14.jpeg"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            alt="Savana Propok">
+                    </div>
+                    <div class="p-5 relative z-10 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2 font-futuristic">11. Savana Propok</h4>
+                            <p class="text-xs text-gray-400 mb-3">(1.900 mdpl) Lembah savana ikonik.</p>
+                            <p class="text-xs text-gray-500 mb-3"><strong class="text-gray-300">Trek:</strong> 2-3 jam
+                                (landai)</p>
+                        </div>
+                        <div class="text-sm font-bold text-rinjani-gold font-futuristic">Rp 600rb - 1jt</div>
+                    </div>
+                </div>
+                <div
+                    class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden group premium-glow card-sweep flex flex-col">
+                    <div class="h-32 w-full overflow-hidden relative z-0">
+                        <img src="images/rinjani15.jpeg"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                            alt="Jaran Kurus">
+                    </div>
+                    <div class="p-5 relative z-10 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-2 font-futuristic">12. Jaran Kurus</h4>
+                            <p class="text-xs text-gray-400 mb-3">Tebing dramatis & padang rumput memukau.</p>
+                            <p class="text-xs text-gray-500 mb-3"><strong class="text-gray-300">Trek:</strong> 2.5-3.5
+                                jam</p>
+                        </div>
+                        <div class="text-sm font-bold text-rinjani-gold font-futuristic">Rp 550rb - 950rb</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="#booking"
+                    class="inline-block bg-white text-black font-bold py-3 px-8 rounded-full hover:bg-gray-200 transition text-sm font-futuristic">Konsultasi
+                    Paket</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- KALKULATOR FISIK (FITUR SUPER) -->
+    <section id="calculator" class="py-24 relative border-t border-gray-800 bg-black/50">
+        <div class="container mx-auto px-6 md:px-12 max-w-5xl reveal md:pr-24">
+            <div class="text-center mb-12">
+                <h2 class="text-rinjani-gold font-bold tracking-widest uppercase text-sm mb-2 auto-type-heading font-futuristic"
+                    data-text="AI ASSISTANT"></h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-white mb-4 auto-type-heading font-futuristic tracking-wide"
+                    data-text="KALKULATOR PERSIAPAN"></h3>
+                <p class="text-gray-400">Masukkan data fisik Anda untuk melihat estimasi kalori dan persiapan.</p>
+            </div>
+
+            <div
+                class="bg-rinjani-card rounded-2xl border border-gray-700 shadow-[0_0_40px_rgba(15,76,58,0.3)] p-8 md:p-12 flex flex-col md:flex-row gap-12 backdrop-blur-md">
+                <div class="md:w-1/2">
+                    <div class="mb-6">
+                        <label class="block text-gray-300 text-sm font-bold mb-2 font-futuristic tracking-wide">Berat
+                            Badan (KG)</label>
+                        <input type="number" id="calc-weight"
+                            class="w-full bg-gray-900 border border-gray-700 text-white rounded-lg py-3 px-4 focus:outline-none focus:border-rinjani-gold"
+                            placeholder="Contoh: 70">
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-300 text-sm font-bold mb-2 font-futuristic tracking-wide">Tinggi
+                            Badan (CM)</label>
+                        <input type="number" id="calc-height"
+                            class="w-full bg-gray-900 border border-gray-700 text-white rounded-lg py-3 px-4 focus:outline-none focus:border-rinjani-gold"
+                            placeholder="Contoh: 170">
+                    </div>
+                    <button onclick="calculateTrek()"
+                        class="w-full bg-rinjani-gold text-black font-bold py-4 rounded-lg hover:bg-yellow-400 transition shadow-[0_0_15px_rgba(212,175,55,0.4)] font-futuristic tracking-widest">
+                        HITUNG SEKARANG
+                    </button>
+                </div>
+
+                <div class="md:w-1/2 flex flex-col justify-center">
+                    <div id="calc-result" class="hidden opacity-0 transition-opacity duration-500">
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-800 p-4 rounded-lg text-center shadow-inner">
+                                <p class="text-xs text-gray-400 uppercase font-futuristic">Langkah ke Puncak</p>
+                                <p id="res-steps" class="text-2xl font-black text-rinjani-gold mt-1 font-futuristic">0
+                                </p>
+                            </div>
+                            <div class="bg-gray-800 p-4 rounded-lg text-center shadow-inner">
+                                <p class="text-xs text-gray-400 uppercase font-futuristic">Kalori Terbakar</p>
+                                <p id="res-cal" class="text-2xl font-black text-[#ff4d4d] mt-1 font-futuristic">0 kcal
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bg-rinjani-green/20 border border-rinjani-green p-4 rounded-lg">
+                            <ul class="text-sm text-gray-300 space-y-2">
+                                <li>💧 Minum Air: <strong id="res-water" class="text-rinjani-gold">0 Liter</strong>/hari
+                                </li>
+                                <li>🍫 Snack Bar: Min. <strong id="res-snack" class="text-rinjani-gold">0 Bar</strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="calc-placeholder"
+                        class="text-center text-gray-500 h-full flex items-center justify-center border-2 border-dashed border-gray-700 rounded-xl p-8 font-futuristic text-sm">
+                        Masukkan data Anda di samping.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERI INSTAGRAM (FITUR BARU) -->
+    <section id="gallery" class="py-24 relative border-t border-gray-800 bg-[#06090e]">
+        <div class="container mx-auto px-6 md:px-12 max-w-6xl reveal md:pr-24">
+            <div class="text-center mb-12">
+                <h2 class="text-rinjani-gold font-bold tracking-widest uppercase text-sm mb-2 auto-type-heading font-futuristic"
+                    data-text="MOMEN TERBAIK"></h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-white mb-4 auto-type-heading font-futuristic tracking-wide"
+                    data-text="GALERI PETUALANGAN"></h3>
+                <p class="text-gray-400 text-sm">Jejak langkah nyata dari para petualang di puncak Rinjani dan surga
+                    Lombok.</p>
+                <!-- Keterangan UI: Data pada bagian ini idealnya dihubungkan dengan backend (CMS) untuk update foto otomatis -->
+            </div>
+
+            <!-- Grid Galeri -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-10">
+                <!-- Image 1 -->
+                <div
+                    class="relative group overflow-hidden rounded-xl aspect-square border border-gray-800 shadow-lg cursor-pointer">
+                    <img src="images/rinjani1.jpeg"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                        alt="Gallery">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <!-- Image 2 -->
+                <div
+                    class="relative group overflow-hidden rounded-xl aspect-square border border-gray-800 shadow-lg cursor-pointer">
+                    <img src="images/rinjani2.jpeg"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                        alt="Gallery">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <!-- Image 3 -->
+                <div
+                    class="relative group overflow-hidden rounded-xl aspect-square border border-gray-800 shadow-lg cursor-pointer">
+                    <img src="images/rinjani3.jpeg"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                        alt="Gallery">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <!-- Video Placeholder -->
+                <div
+                    class="relative group overflow-hidden rounded-xl aspect-square border border-gray-800 shadow-lg cursor-pointer">
+                    <img src="images/rinjani16.jpeg"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                        alt="Gallery">
+                    <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                        <svg class="w-12 h-12 text-white/80 group-hover:text-white transition duration-300 drop-shadow-md"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <!-- Image 4 -->
+                <div
+                    class="relative group overflow-hidden rounded-xl aspect-square border border-gray-800 shadow-lg cursor-pointer hidden md:block">
+                    <img src="images/rinjani7.jpeg"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                        alt="Gallery">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <!-- Image 5 -->
+                <div
+                    class="relative group overflow-hidden rounded-xl aspect-square border border-gray-800 shadow-lg cursor-pointer hidden md:block">
+                    <img src="images/rinjani8.jpeg"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                        alt="Gallery">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <!-- Image 6 -->
+                <div
+                    class="relative group overflow-hidden rounded-xl aspect-square border border-gray-800 shadow-lg cursor-pointer hidden md:block">
+                    <img src="images/rinjani11.jpeg"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                        alt="Gallery">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <!-- Image 7 -->
+                <div
+                    class="relative group overflow-hidden rounded-xl aspect-square border border-gray-800 shadow-lg cursor-pointer hidden md:block">
+                    <img src="images/rinjani12.jpeg"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500"
+                        alt="Gallery">
+                    <div
+                        class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tombol Instagram -->
+            <div class="text-center">
+                <a href="https://instagram.com/grand.rinjani" target="_blank"
+                    class="inline-flex items-center gap-3 ig-gradient text-white font-bold py-3 px-8 rounded-full hover:scale-105 transition-transform shadow-[0_0_20px_rgba(220,39,67,0.4)]">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                    Selengkapnya di Instagram @grand.rinjani
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM BOOKING WHATSAPP -->
+    <section id="booking" class="py-24 relative bg-black border-t border-gray-800">
+        <div class="container mx-auto px-6 md:px-12 max-w-3xl reveal md:pr-24">
+            <div class="text-center mb-12">
+                <h2 class="text-rinjani-gold font-bold tracking-widest uppercase text-sm mb-2 auto-type-heading font-futuristic"
+                    data-text="PESAN SEKARANG"></h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-white mb-4 auto-type-heading font-futuristic tracking-wide"
+                    data-text="KONSULTASI & BOOKING"></h3>
+            </div>
+
+            <form id="wa-form" onsubmit="sendToWhatsApp(event)"
+                class="bg-rinjani-card p-8 rounded-2xl border border-gray-700 shadow-[0_0_30px_rgba(212,175,55,0.15)] backdrop-blur-md premium-glow">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 relative z-10">
+                    <div>
+                        <label class="block text-gray-300 text-sm font-bold mb-2 font-futuristic tracking-wide">Nama
+                            Lengkap</label>
+                        <input type="text" id="wa-name" required
+                            class="w-full bg-gray-900 border border-gray-700 text-white rounded-lg py-3 px-4 focus:outline-none focus:border-rinjani-gold">
+                    </div>
+                    <div>
+                        <label class="block text-gray-300 text-sm font-bold mb-2 font-futuristic tracking-wide">Pilih
+                            Paket</label>
+                        <select id="wa-package" required
+                            class="w-full bg-gray-900 border border-gray-700 text-white rounded-lg py-3 px-4 focus:outline-none text-sm focus:border-rinjani-gold">
+                            <option value="" disabled selected>-- Paket Rinjani --</option>
+                            <option value="Rinjani 2H1M (Puncak)">Rinjani 2 Hari 1 Malam</option>
+                            <option value="Rinjani 3H2M (Lengkap)">Rinjani 3 Hari 2 Malam</option>
+                            <option value="Rinjani 4H3M (Santai)">Rinjani 4 Hari 3 Malam</option>
+                            <option value="" disabled>-- Surga Tersembunyi Lombok --</option>
+                            <option value="Tour Pantai & 3 Gili">Tour Pantai & 3 Gili</option>
+                            <option value="Sirkuit Mandalika Tour">Sirkuit Mandalika Tour</option>
+                            <option value="Eksplorasi Mataram">Eksplorasi Kota Mataram</option>
+                            <option value="Tour Air Terjun Utara/Tengah">Tour Air Terjun Utara/Tengah</option>
+                            <option value="Agrowisata Sembalun">Agrowisata Sembalun</option>
+                            <option value="Soft Trekking / Camping Bukit">Camping Bukit (Pergasingan/Nanggi dll)
+                            </option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 relative z-10">
+                    <div>
+                        <label class="block text-gray-300 text-sm font-bold mb-2 font-futuristic tracking-wide">Rencana
+                            Tanggal</label>
+                        <input type="date" id="wa-date" required
+                            class="w-full bg-gray-900 border border-gray-700 text-white rounded-lg py-3 px-4 focus:outline-none focus:border-rinjani-gold">
+                    </div>
+                    <div>
+                        <label class="block text-gray-300 text-sm font-bold mb-2 font-futuristic tracking-wide">Jumlah
+                            Peserta (Pax)</label>
+                        <input type="number" id="wa-pax" required min="1"
+                            class="w-full bg-gray-900 border border-gray-700 text-white rounded-lg py-3 px-4 focus:outline-none focus:border-rinjani-gold"
+                            placeholder="Contoh: 4">
+                    </div>
+                </div>
+
+                <div class="mb-8 relative z-10">
+                    <label class="block text-gray-300 text-sm font-bold mb-2 font-futuristic tracking-wide">Pesan
+                        Tambahan</label>
+                    <textarea id="wa-message" rows="3"
+                        class="w-full bg-gray-900 border border-gray-700 text-white rounded-lg py-3 px-4 focus:outline-none focus:border-rinjani-gold"
+                        placeholder="Cth: Butuh penjemputan di Bandara..."></textarea>
+                </div>
+
+                <button type="submit"
+                    class="w-full flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold py-4 rounded-lg transition shadow-[0_0_20px_rgba(37,211,102,0.5)] relative z-10 font-futuristic tracking-widest">
+                    KIRIM BOOKING
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER WITH MOUNTAIN PEAK BACKGROUND -->
+    <footer class="relative bg-black pt-20 pb-10 border-t border-gray-800 z-50 overflow-hidden">
+        <!-- Background Image of Mountain Peak -->
+        <div class="absolute inset-0 z-0 opacity-20">
+            <img src="images/rinjani17.jpeg" class="w-full h-full object-cover object-top" alt="Mountain Peak Footer">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+        </div>
+
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl font-extrabold text-white mb-2 font-futuristic tracking-widest">GRAND<span
+                    class="text-rinjani-gold">RINJANI</span></h2>
+            <p class="text-gray-400 mb-4 text-sm max-w-xl mx-auto">Keselamatan Anda adalah prioritas kami. Kenangan
+                indah adalah garansi kami.</p>
+            <p class="text-xs text-gray-600 font-futuristic">&copy; 2026 Grand Rinjani Trekking & Tours.</p>
+        </div>
+    </footer>
+
+    <!-- ================= MODAL ITINERARY ================= -->
+    <!-- Modal 2D1N -->
+    <div id="modal-2d1n" class="fixed inset-0 z-[100] modal-overlay hidden items-center justify-center p-4">
+        <div
+            class="bg-rinjani-card w-full max-w-3xl rounded-2xl border border-gray-700 shadow-2xl max-h-[90vh] overflow-y-auto relative no-scrollbar premium-glow">
+            <button onclick="closeModal('modal-2d1n')"
+                class="absolute top-4 right-4 text-gray-400 hover:text-rinjani-gold text-2xl font-bold z-10">&times;</button>
+            <div class="p-8">
+                <h3 class="text-2xl font-bold text-white mb-2 font-futuristic">ITINERARY 2H1M PUNCAK</h3>
+                <p class="text-sm text-gray-400 mb-6 border-b border-gray-700 pb-4">Rute: Sembalun – Plawangan Sembalun
+                    – Puncak – Sembalun. Fokus utama menaklukkan Puncak Rinjani.</p>
+
+                <div class="space-y-6 text-sm text-gray-300">
+                    <div>
+                        <h4 class="text-rinjani-gold font-bold text-lg mb-2">Hari 1: Desa Sembalun (1.105 mdpl) –
+                            Plawangan Sembalun (2.639 mdpl)</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>06:30 WITA:</strong> Sarapan di penginapan, kemudian persiapan menuju pos
+                                registrasi Rinjani Information Center (RIC) di Sembalun untuk medical check-up dan
+                                pengecekan tiket.</li>
+                            <li><strong>08:00 WITA:</strong> Pendakian dimulai dari Desa Sembalun. Jalur awal berupa
+                                padang sabana yang terbuka dan relatif datar.</li>
+                            <li><strong>12:00 WITA:</strong> Tiba di Pos 2 (Tengengean) atau Pos 3 (Pada Balong) untuk
+                                istirahat dan makan siang.</li>
+                            <li><strong>13:30 WITA:</strong> Melanjutkan perjalanan melewati "Bukit Penyesalan", jalur
+                                menanjak terjal berupa tanah dan bebatuan.</li>
+                            <li><strong>17:00 WITA:</strong> Tiba di Plawangan Sembalun (2.639 mdpl). Pemasangan tenda,
+                                menikmati sunset dengan pemandangan Danau Segara Anak, dan makan malam. Istirahat.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-rinjani-gold font-bold text-lg mb-2">Hari 2: Plawangan Sembalun – Puncak Rinjani
+                            (3.726 mdpl) – Desa Sembalun</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>02:00 WITA:</strong> Bangun dini hari, menikmati minuman hangat dan makanan
+                                ringan.</li>
+                            <li><strong>02:30 WITA:</strong> Memulai summit attack. Jalur berpasir tebal dan curam.
+                                Dibutuhkan stamina ekstra untuk 3 jam pendakian ini.</li>
+                            <li><strong>06:00 WITA:</strong> Tiba di Puncak Rinjani bertepatan dengan matahari terbit
+                                (sunrise).</li>
+                            <li><strong>07:00 WITA:</strong> Turun kembali ke perkemahan di Plawangan Sembalun.</li>
+                            <li><strong>09:00 WITA:</strong> Sarapan besar di tenda dan istirahat sejenak.</li>
+                            <li><strong>10:00 WITA:</strong> Perjalanan turun kembali menuju Desa Sembalun.</li>
+                            <li><strong>13:00 WITA:</strong> Makan siang di Pos 2 atau Pos 1.</li>
+                            <li><strong>15:00 WITA:</strong> Tiba di Desa Sembalun. Tamu akan diantar menggunakan mobil
+                                menuju destinasi selanjutnya.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3D2N -->
+    <div id="modal-3d2n" class="fixed inset-0 z-[100] modal-overlay hidden items-center justify-center p-4">
+        <div
+            class="bg-rinjani-card w-full max-w-3xl rounded-2xl border border-gray-700 shadow-2xl max-h-[90vh] overflow-y-auto relative no-scrollbar premium-glow">
+            <button onclick="closeModal('modal-3d2n')"
+                class="absolute top-4 right-4 text-gray-400 hover:text-rinjani-gold text-2xl font-bold z-10">&times;</button>
+            <div class="p-8">
+                <h3 class="text-2xl font-bold text-white mb-2 font-futuristic">ITINERARY 3H2M LENGKAP</h3>
+                <p class="text-sm text-gray-400 mb-6 border-b border-gray-700 pb-4">Rute: Sembalun – Puncak – Danau
+                    Segara Anak – Plawangan Senaru – Senaru. Paket paling populer.</p>
+
+                <div class="space-y-6 text-sm text-gray-300">
+                    <div>
+                        <h4 class="text-rinjani-gold font-bold text-lg mb-2">Hari 1: Desa Sembalun – Plawangan Sembalun
+                        </h4>
+                        <p class="pl-2 border-l-2 border-gray-600 mb-2 italic">Itinerary sama dengan Hari 1 pada paket
+                            2D/1N. Menginap di Plawangan Sembalun.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-rinjani-gold font-bold text-lg mb-2">Hari 2: Puncak Rinjani – Danau Segara Anak
+                            – Plawangan Senaru</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>02:00 - 09:00 WITA:</strong> Summit attack ke Puncak Rinjani, turun kembali ke
+                                kemah, dan sarapan.</li>
+                            <li><strong>10:00 WITA:</strong> Turun menuju Danau Segara Anak. Jalur berbatu dan curam
+                                (membutuhkan kehati-hatian ekstra).</li>
+                            <li><strong>13:00 WITA:</strong> Tiba di Danau Segara Anak. Makan siang di tepi danau. Tamu
+                                dapat mengunjungi Pemandian Air Panas alami untuk relaksasi.</li>
+                            <li><strong>15:00 WITA:</strong> Melanjutkan pendakian mendaki dinding tebing menuju
+                                Plawangan Senaru.</li>
+                            <li><strong>18:00 WITA:</strong> Tiba di Plawangan Senaru. Menikmati sunset, makan malam dan
+                                bermalam di tenda.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-rinjani-gold font-bold text-lg mb-2">Hari 3: Plawangan Senaru – Desa Senaru (601
+                            mdpl)</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>06:30 WITA:</strong> Bangun pagi untuk menikmati sunrise dan sarapan.</li>
+                            <li><strong>08:00 WITA:</strong> Perjalanan turun menuju Desa Senaru melewati hutan hujan
+                                tropis.</li>
+                            <li><strong>12:00 WITA:</strong> Istirahat dan makan siang di Pos 2 (Montong Satas) atau Pos
+                                Ekstra.</li>
+                            <li><strong>14:00 WITA:</strong> Tiba di gerbang pendakian Senaru (RTC). Perjalanan selesai
+                                dan tamu diantar ke tujuan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4D3N -->
+    <div id="modal-4d3n" class="fixed inset-0 z-[100] modal-overlay hidden items-center justify-center p-4">
+        <div
+            class="bg-rinjani-card w-full max-w-3xl rounded-2xl border border-gray-700 shadow-2xl max-h-[90vh] overflow-y-auto relative no-scrollbar premium-glow">
+            <button onclick="closeModal('modal-4d3n')"
+                class="absolute top-4 right-4 text-gray-400 hover:text-rinjani-gold text-2xl font-bold z-10">&times;</button>
+            <div class="p-8">
+                <h3 class="text-2xl font-bold text-white mb-2 font-futuristic">ITINERARY 4H3M EKSPLORASI</h3>
+                <p class="text-sm text-gray-400 mb-6 border-b border-gray-700 pb-4">Rute: Sembalun – Puncak – Danau
+                    Segara Anak – Plawangan Senaru – Senaru. Tempo santai.</p>
+
+                <div class="space-y-6 text-sm text-gray-300">
+                    <div>
+                        <h4 class="text-rinjani-gold font-bold text-lg mb-2">Hari 1: Desa Sembalun – Plawangan Sembalun
+                        </h4>
+                        <p class="pl-2 border-l-2 border-gray-600 mb-2 italic">Itinerary sama dengan Hari 1 pada paket
+                            2D/1N. Menginap di Plawangan Sembalun.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-rinjani-gold font-bold text-lg mb-2">Hari 2: Plawangan Sembalun – Puncak Rinjani
+                            – Danau Segara Anak</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>02:00 - 09:00 WITA:</strong> Summit attack, kembali ke tenda, dan sarapan.</li>
+                            <li><strong>10:00 WITA:</strong> Turun menuju Danau Segara Anak.</li>
+                            <li><strong>13:00 WITA:</strong> Tiba di Danau Segara Anak. Pemasangan tenda (Camp 2).</li>
+                            <li><strong>13:30 - Malam:</strong> Makan siang. Setengah hari dihabiskan untuk bersantai di
+                                area danau (berendam di Air Panas, memancing, eksplorasi Goa Susu). Makan malam.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-rinjani-gold font-bold text-lg mb-2">Hari 3: Danau Segara Anak – Plawangan
+                            Senaru</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>08:00 WITA:</strong> Sarapan santai di tepi danau. Waktu bebas.</li>
+                            <li><strong>11:00 WITA:</strong> Makan siang lebih awal di area danau.</li>
+                            <li><strong>12:30 WITA:</strong> Mulai mendaki menuju Plawangan Senaru. Perjalanan santai
+                                menyusuri tebing.</li>
+                            <li><strong>15:30 WITA:</strong> Tiba di Plawangan Senaru (Camp 3). Pemasangan tenda,
+                                menikmati pemandangan sunset, makan malam dan bermalam.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-rinjani-gold font-bold text-lg mb-2">Hari 4: Plawangan Senaru – Desa Senaru</h4>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><strong>07:00 WITA:</strong> Sarapan sambil menikmati pagi.</li>
+                            <li><strong>08:30 WITA:</strong> Mulai perjalanan turun menyusuri hutan hujan tropis menuju
+                                Desa Senaru.</li>
+                            <li><strong>12:30 WITA:</strong> Istirahat dan makan siang di tengah hutan.</li>
+                            <li><strong>14:30 WITA:</strong> Tiba di Desa Senaru. Program selesai, transfer out.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT UTAMA -->
+    <script>
+        // 1. ANIMASI FLOATING MENU (Muncul satu per satu saat di-load)
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.nav-float-item').forEach((item, index) => {
+                item.style.animationDelay = `${index * 0.15}s`;
+                item.classList.add('show');
+            });
+        });
+
+        // 2. TOGGLE CHAT MULTI-PLATFORM MENU
+        function toggleChatMenu() {
+            const container = document.getElementById('floating-chat-container');
+            const mainIcon = document.getElementById('chat-icon-main');
+            const closeIcon = document.getElementById('chat-icon-close');
+
+            container.classList.toggle('chat-menu-open');
+
+            if (container.classList.contains('chat-menu-open')) {
+                mainIcon.classList.add('opacity-0', 'scale-50');
+                closeIcon.classList.remove('opacity-0', 'scale-50');
+                closeIcon.classList.add('opacity-100', 'scale-100');
+            } else {
+                closeIcon.classList.remove('opacity-100', 'scale-100');
+                closeIcon.classList.add('opacity-0', 'scale-50');
+                mainIcon.classList.remove('opacity-0', 'scale-50');
+            }
+        }
+
+        // 3. AUDIO PLAYER TOGGLE
+        const audio = document.getElementById('bg-audio');
+        let isPlaying = false;
+        function toggleAudio() {
+            if (isPlaying) {
+                audio.pause();
+                document.getElementById('music-icon').innerHTML = '<path d="M9 18c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3zm12-15v11.838c-1.353-.518-2.85-.838-4.5-.838-1.65 0-3.147.32-4.5.838v-8.838l9-3zm-9 19c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3zm9-3c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"/>';
+            } else {
+                audio.play();
+                document.getElementById('music-icon').innerHTML = '<path d="M11 22h-4v-20h4v20zm6-20h-4v20h4v-20z"/>';
+            }
+            isPlaying = !isPlaying;
+        }
+
+        // 4. LOGIC HERO MENGHILANG -> LOGO BESAR MUNCUL -> NAV LOGO MUNCUL SAAT SCROLL
+        const navLogo = document.getElementById('nav-logo');
+        const heroLogoContainer = document.getElementById('hero-logo-container');
+        const heroTextContainer = document.getElementById('hero-text-container');
+
+        window.addEventListener('scroll', () => {
+            // Animasi untuk Top-Left Logo saat di-scroll
+            if (window.scrollY > 100) {
+                navLogo.classList.replace('opacity-0', 'opacity-100');
+            } else {
+                navLogo.classList.replace('opacity-100', 'opacity-0');
+            }
+
+            // MDPL Tracker update
+            const mdplBar = document.getElementById('mdpl-bar');
+            const mdplNumber = document.getElementById('mdpl-number');
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrollPercent = scrollTop / scrollHeight;
+            if (scrollPercent < 0) scrollPercent = 0;
+            if (scrollPercent > 1) scrollPercent = 1;
+
+            mdplBar.style.height = `${scrollPercent * 100}%`;
+            mdplNumber.style.bottom = `${scrollPercent * 100}%`;
+
+            let currentMdpl = Math.floor(scrollPercent * 3726);
+            if (scrollPercent > 0.98) currentMdpl = 3726;
+            mdplNumber.innerText = `${currentMdpl} mdpl`;
+        });
+
+        // 5. ANIMASI NAMA PERUSAHAAN DI NAVBAR (Ketik berulang 10 detik)
+        const logoElement = document.getElementById('animated-logo-text');
+        const companyName = "GRANDRINJANI";
+        function typeCompanyName() {
+            logoElement.innerHTML = '';
+            let i = 0;
+            logoElement.classList.add('typing-cursor');
+
+            function typeChar() {
+                if (i < companyName.length) {
+                    logoElement.innerHTML += companyName.charAt(i);
+                    i++;
+                    setTimeout(typeChar, 100);
+                } else {
+                    setTimeout(() => logoElement.classList.remove('typing-cursor'), 2000);
+                }
+            }
+            typeChar();
+        }
+        typeCompanyName();
+        setInterval(typeCompanyName, 10000);
+
+        // 6. TYPEWRITER HERO UTAMA
+        const phrases = [
+            "TAKLUKKAN PUNCAK RINJANI.",
+            "PELAYANAN EKSKLUSIF BINTANG 5.",
+            "EKSPLORASI BUDAYA LOMBOK.",
+            "SURGA TERSEMBUNYI MENANTI."
+        ];
+        let currentPhrase = 0, isDeleting = false, txt = '';
+        const speed = 70, wait = 1200;
+
+        function typeWriterHero() {
+            if (currentPhrase === phrases.length) return;
+
+            const currentText = phrases[currentPhrase];
+            if (isDeleting) {
+                txt = currentText.substring(0, txt.length - 1);
+            } else {
+                txt = currentText.substring(0, txt.length + 1);
+            }
+
+            document.getElementById("typewriter-text").innerHTML = txt;
+            let typeSpeed = speed;
+            if (isDeleting) typeSpeed /= 2;
+
+            if (!isDeleting && txt === currentText) {
+                if (currentPhrase === phrases.length - 1) {
+                    setTimeout(() => {
+                        heroTextContainer.classList.add('opacity-0', 'scale-90');
+                        heroTextContainer.classList.remove('opacity-100', 'scale-100');
+
+                        setTimeout(() => {
+                            heroTextContainer.classList.add('hidden');
+                            heroLogoContainer.classList.remove('hidden');
+
+                            setTimeout(() => {
+                                heroLogoContainer.classList.remove('opacity-0', 'scale-50');
+                                heroLogoContainer.classList.add('opacity-100', 'scale-100');
+                            }, 50);
+                        }, 1000);
+                    }, 2000);
+                    return;
+                } else {
+                    typeSpeed = wait;
+                    isDeleting = true;
+                }
+            } else if (isDeleting && txt === '') {
+                isDeleting = false;
+                currentPhrase++;
+                typeSpeed = 400;
+            }
+            setTimeout(typeWriterHero, typeSpeed);
+        }
+
+        // 7. SCROLL REVEAL ANIMATION 
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+
+        // 8. TYPEWRITER DINAMIS PADA SUB-JUDUL CARD
+        const typingObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    if (!el.classList.contains('typed-done')) {
+                        el.classList.add('typed-done', 'typing-cursor');
+                        const text = el.getAttribute('data-text');
+                        el.innerHTML = '';
+                        let i = 0;
+                        function typeIt() {
+                            if (i < text.length) {
+                                el.innerHTML += text.charAt(i);
+                                i++;
+                                setTimeout(typeIt, 50);
+                            } else {
+                                setTimeout(() => el.classList.remove('typing-cursor'), 2000);
+                            }
+                        }
+                        typeIt();
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.auto-type-heading').forEach(el => {
+            typingObserver.observe(el);
+        });
+
+        // 9. TAB LOGIC UNTUK SURGA TERSEMBUNYI
+        function openTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => {
+                el.classList.add('hidden'); el.classList.remove('grid');
+            });
+            document.querySelectorAll('.tab-btn').forEach(el => {
+                el.classList.remove('bg-rinjani-gold', 'text-black');
+                el.classList.add('bg-gray-800', 'text-white');
+            });
+            const targetContent = document.getElementById(tabId);
+            targetContent.classList.remove('hidden'); targetContent.classList.add('grid');
+            event.currentTarget.classList.remove('bg-gray-800', 'text-white');
+            event.currentTarget.classList.add('bg-rinjani-gold', 'text-black');
+        }
+
+        // 10. MODAL LOGIC UNTUK ITINERARY
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+            document.getElementById(modalId).classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('flex');
+            document.getElementById(modalId).classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // 11. KALKULATOR PENDAKIAN
+        function calculateTrek() {
+            const weight = parseFloat(document.getElementById('calc-weight').value);
+            const height = parseFloat(document.getElementById('calc-height').value);
+            if (!weight || !height || weight <= 0 || height <= 0) {
+                alert("Mohon masukkan berat dan tinggi badan yang valid."); return;
+            }
+            const stepLength = (height / 100) * 0.413;
+            let steps = Math.floor(15000 / stepLength);
+            let calories = Math.floor(weight * 65);
+            let water = (weight * 0.05).toFixed(1);
+            let snacks = Math.floor(calories / 300);
+            if (snacks > 15) snacks = 15;
+
+            document.getElementById('calc-placeholder').style.display = 'none';
+            const resultDiv = document.getElementById('calc-result');
+            resultDiv.classList.remove('hidden');
+
+            animateValue('res-steps', 0, steps, 1500);
+            animateValue('res-cal', 0, calories, 1500, ' kcal');
+            document.getElementById('res-water').innerText = `${water} Liter`;
+            document.getElementById('res-snack').innerText = `${snacks} Bar`;
+            setTimeout(() => { resultDiv.classList.add('opacity-100'); }, 50);
+        }
+
+        function animateValue(id, start, end, duration, suffix = "") {
+            const obj = document.getElementById(id);
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const easeOut = 1 - Math.pow(1 - progress, 4);
+                obj.innerHTML = Math.floor(easeOut * (end - start) + start).toLocaleString('id-ID') + suffix;
+                if (progress < 1) { window.requestAnimationFrame(step); }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // 12. WHATSAPP BOOKING LOGIC
+        function sendToWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('wa-name').value;
+            const pkg = document.getElementById('wa-package').value;
+            const date = document.getElementById('wa-date').value;
+            const pax = document.getElementById('wa-pax').value;
+            const message = document.getElementById('wa-message').value || "-";
+
+            const text = `Halo Admin Grand Rinjani, saya tertarik untuk melakukan pemesanan:\n\n*Detail Tamu:*\n👤 Nama: ${name}\n📦 Paket Tour: ${pkg}\n🗓️ Tanggal: ${date}\n👥 Jumlah Peserta: ${pax} Orang\n💬 Pesan Tambahan: ${message}\n\nMohon informasi ketersediaan. Terima kasih!`;
+            const waNumber = "6285956684081";
+            const encodedText = encodeURIComponent(text);
+            window.open(`https://wa.me/${waNumber}?text=${encodedText}`, '_blank');
+        }
+
+        // INISIALISASI SAAT LOAD
+        window.onload = () => {
+            typeWriterHero();
+            reveal();
+            window.dispatchEvent(new Event('scroll'));
+        };
+    </script>
+</body>
+
+</html>
