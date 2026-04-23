@@ -299,7 +299,13 @@
         .ig-gradient {
             background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
         }
+        /* HIDE GOOGLE TRANSLATE BANNER & TOOLTIP */
+        .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon { display: none !important; }
+        body { top: 0px !important; }
+        #goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
+        font { background: transparent !important; color: inherit !important; box-shadow: none !important; }
     </style>
+    
 </head>
 
 <body class="antialiased relative">
@@ -320,16 +326,8 @@
 
     <!-- TOP-LEFT NAVBAR LOGO (Muncul Saat Scroll) -->
     <header class="fixed top-0 left-0 w-full z-50 pointer-events-none p-5 md:p-8">
-        <a href="#" id="nav-logo"
-            class="inline-flex items-center gap-2 text-white opacity-0 transition-opacity duration-700 pointer-events-auto group">
-            <svg class="w-8 h-8 text-rinjani-gold transform group-hover:scale-110 transition drop-shadow-[0_0_10px_rgba(212,175,55,0.8)]"
-                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M8 18L12 11L16 18M3 21L12 5L21 21" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-            <div class="text-xl md:text-2xl font-futuristic font-extrabold tracking-widest drop-shadow-lg flex">
-                <span id="animated-logo-text" class="text-white"></span>
-                <span class="text-rinjani-gold ml-1"></span>
-            </div>
+        <a href="#" id="nav-logo" class="inline-flex items-center opacity-0 transition-opacity duration-700 pointer-events-auto group">
+            <img src="images/grandrinjani-logo.png" alt="Grand Rinjani Logo" class="h-10 md:h-14 w-auto transform group-hover:scale-105 transition drop-shadow-[0_0_15px_rgba(212,175,55,0.6)]">
         </a>
     </header>
 
@@ -391,20 +389,17 @@
             <span class="nav-float-tooltip group-hover:opacity-0">BAHASA</span>
 
             <!-- Dropdown Menu Box -->
-            <div
-                class="absolute right-16 top-1/2 transform -translate-y-1/2 w-40 glass-bg border border-gray-800 text-white rounded-lg shadow-2xl opacity-0 transition-opacity duration-300 invisible group-hover:opacity-100 group-hover:visible z-50 max-h-64 overflow-y-auto no-scrollbar pointer-events-auto">
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold rounded-t-lg">🇮🇩
-                    Indonesia</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold">🇲🇾 Malaysia</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold">🇬🇧 Inggris</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold">🇯🇵 Jepang</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold">🇨🇳 Mandarin</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold">🇭🇰 Hongkong</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold">🇸🇦 Arab</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold">🇩🇪 Jerman</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold">🇵🇹 Portugis</a>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-800 hover:text-rinjani-gold rounded-b-lg">🇮🇳
-                    India</a>
+          <div class="absolute right-16 top-1/2 transform -translate-y-1/2 w-48 glass-bg border border-gray-800 text-white rounded-lg shadow-2xl opacity-0 transition-opacity duration-300 invisible group-hover:opacity-100 group-hover:visible z-50 max-h-64 overflow-y-auto no-scrollbar pointer-events-auto">
+                <button onclick="translatePage('id')" class="w-full text-left px-4 py-3 hover:bg-gray-800 hover:text-rinjani-gold rounded-t-lg transition">🇮🇩 Indonesia</button>
+                <button onclick="translatePage('ms')" class="w-full text-left px-4 py-3 hover:bg-gray-800 hover:text-rinjani-gold transition">🇲🇾 Malaysia</button>
+                <button onclick="translatePage('en')" class="w-full text-left px-4 py-3 hover:bg-gray-800 hover:text-rinjani-gold transition">🇬🇧 Inggris</button>
+                <button onclick="translatePage('ja')" class="w-full text-left px-4 py-3 hover:bg-gray-800 hover:text-rinjani-gold transition">🇯🇵 Jepang</button>
+                <button onclick="translatePage('zh-CN')" class="w-full text-left px-4 py-3 hover:bg-gray-800 hover:text-rinjani-gold transition">🇨🇳 Mandarin</button>
+                <button onclick="translatePage('zh-TW')" class="w-full text-left px-4 py-3 hover:bg-gray-800 hover:text-rinjani-gold transition">🇭🇰 Hongkong</button>
+                <button onclick="translatePage('ar')" class="w-full text-left px-4 py-3 hover:bg-gray-800 hover:text-rinjani-gold transition">🇸🇦 Arab</button>
+                <button onclick="translatePage('de')" class="w-full text-left px-4 py-3 hover:bg-gray-800 hover:text-rinjani-gold transition">🇩🇪 Jerman</button>
+                <button onclick="translatePage('pt')" class="w-full text-left px-4 py-3 hover:bg-gray-800 hover:text-rinjani-gold transition">🇵🇹 Portugis</button>
+                <button onclick="translatePage('hi')" class="w-full text-left px-4 py-3 hover:bg-gray-800 hover:text-rinjani-gold rounded-b-lg transition">🇮🇳 India</button>
             </div>
         </div>
 
@@ -516,27 +511,15 @@
             </div>
 
             <!-- Logo Besar di Tengah (Muncul setelah Teks Selesai) -->
-            <div id="hero-logo-container"
-                class="absolute inset-0 flex flex-col items-center justify-center transition-all duration-1000 opacity-0 scale-50 hidden">
-                <svg class="w-32 h-32 md:w-48 md:h-48 text-rinjani-gold drop-shadow-[0_0_25px_rgba(212,175,55,0.8)] premium-glow rounded-full p-2"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M8 18L12 11L16 18M3 21L12 5L21 21" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <h2
-                    class="text-4xl md:text-7xl font-futuristic font-extrabold mt-6 tracking-[0.2em] text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]">
-                    GRAND<span class="text-rinjani-gold">RINJANI</span>
-                </h2>
-                <p
-                    class="text-rinjani-gold font-bold tracking-[0.4em] uppercase mt-4 text-sm font-futuristic bg-black/50 px-6 py-2 rounded-full border border-rinjani-gold">
-                    Premium Expedition</p>
-
-                <a href="#packages"
-                    class="mt-12 text-gray-400 hover:text-white transition flex flex-col items-center animate-bounce">
+            <div id="hero-logo-container" class="absolute inset-0 flex flex-col items-center justify-center transition-all duration-1000 opacity-0 scale-50 hidden">
+                
+                <img src="images/grandrinjani-logo.png" alt="Grand Rinjani Premium" class="h-28 md:h-40 w-auto drop-shadow-[0_0_25px_rgba(212,175,55,0.8)] premium-glow">
+                
+                <p class="text-rinjani-gold font-bold tracking-[0.4em] uppercase mt-8 text-sm font-futuristic bg-black/50 px-6 py-2 rounded-full border border-rinjani-gold">Premium Expedition</p>
+                
+                <a href="#packages" class="mt-12 text-gray-400 hover:text-white transition flex flex-col items-center animate-bounce">
                     <span class="text-xs uppercase tracking-widest mb-2 font-futuristic">Scroll Down</span>
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                    </svg>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                 </a>
             </div>
         </div>
@@ -1219,7 +1202,15 @@
             </form>
         </div>
     </section>
-
+    <!-- translate terbaru -->
+    <div id="google_translate_element" style="display: none;"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'id', autoDisplay: false}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
     <!-- FOOTER WITH MOUNTAIN PEAK BACKGROUND -->
     <footer class="relative bg-black pt-20 pb-10 border-t border-gray-800 z-50 overflow-hidden">
         <!-- Background Image of Mountain Peak -->
@@ -1667,6 +1658,16 @@
             const waNumber = "6285956684081";
             const encodedText = encodeURIComponent(text);
             window.open(`https://wa.me/${waNumber}?text=${encodedText}`, '_blank');
+        }
+        // FUNGSI UNTUK MENTRIGGER GOOGLE TRANSLATE DARI DROPDOWN CUSTOM KITA
+        function translatePage(langCode) {
+            const selectField = document.querySelector('select.goog-te-combo');
+            if (selectField) {
+                selectField.value = langCode;
+                selectField.dispatchEvent(new Event('change'));
+            } else {
+                alert('Modul terjemahan sedang dimuat. Harap tunggu beberapa detik lalu coba lagi.');
+            }
         }
 
         // INISIALISASI SAAT LOAD
