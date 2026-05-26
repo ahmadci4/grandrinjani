@@ -4,35 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Grand Rinjani | World-Class Premium Mount Rinjani Trekking</title>
+    <title>Grand Rinjani Trekking | Premium Mount Rinjani Lombok</title>
     <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="apple-touch-icon" href="images/logo.png">
 
-    <meta name="description" content="Experience world-class premium trekking at Mount Rinjani, Lombok with Grand Rinjani. Eco-friendly tour operator offering VIP services, professional guides, and top-tier camping equipment.">
-    <meta name="keywords" content="Grand Rinjani, Rinjani trekking, Mount Rinjani tour, Lombok trekking, premium Rinjani guide, hike Rinjani, Rinjani eco-friendly tour, Sembalun trekking, Senaru trekking, Mount Rinjani VIP package, best Rinjani operator">
-    <meta name="author" content="Grand Rinjani Official">
-    <meta name="robots" content="index, follow">
-
-    <meta property="og:title" content="Grand Rinjani | World-Class Premium Mount Rinjani Trekking">
-    <meta property="og:description" content="Elevate your adventure with Grand Rinjani. VIP services, eco-friendly practices, and unforgettable sunrise views at Mount Rinjani.">
+    <meta property="og:title" content="Grand Rinjani Trekking | Premium Mount Rinjani Lombok">
+    <meta property="og:description" content="Paket trekking Gunung Rinjani Lombok dengan guide profesional, layanan premium, dan eco-friendly.">
     <meta property="og:image" content="https://grandrinjani.com/images/logo.png">
     <meta property="og:url" content="https://grandrinjani.com/">
     <meta property="og:type" content="website">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com" defer></script>
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "TravelAgency",
-      "name": "Grand Rinjani",
+      "name": "Grand Rinjani Trekking",
       "url": "https://grandrinjani.com/",
       "logo": "https://grandrinjani.com/images/logo.png",
       "image": "https://grandrinjani.com/images/logo.png",
-      "description": "World-Class Premium Mount Rinjani Trekking & Lombok Tour Operator.",
+      "description": "Premium Mount Rinjani Trekking & Lombok Tour Operator.",
       "telephone": "+6287864015929",
       "address": {
         "@type": "PostalAddress",
@@ -43,48 +33,44 @@
     }
     </script>
 
-    <style>
-        /* ================= TEMA CERAH & CERIA ================= */
-        body {
-            font-family: 'Nunito', sans-serif;
-            background-color: #f0fdf4; /* Light green/mint background */
-            color: #334155;
-            position: relative;
-        }
+    <meta name="description" content="Paket trekking Gunung Rinjani Lombok dengan guide profesional, layanan premium, dan eco-friendly.">
 
-        /* Hero Background */
-        #home {
-            background-image: url('images/video-bg.mp4'); /* Memanggil video dari folder Anda */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            display: flex;
-            flex-direction: column;
-            justify-content: center; 
-            align-items: center;
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* ================= GLOBAL & BACKGROUND CERAH ================= */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7fafc; /* Latar belakang cerah */
+            position: relative;
         }
 
         .hero-overlay {
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(rgba(255,255,255,0.2), rgba(20, 184, 166, 0.4)); /* Cerah memanjakan mata */
+            background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.5)); /* Overlay cerah */
             z-index: 1;
         }
 
         /* ================= GOOGLE TRANSLATE SUPER HIDE ================= */
+        /* Menyembunyikan top bar dan balon tooltip Google Translate secara paksa */
         body { top: 0 !important; position: static !important; }
         html { top: 0 !important; position: static !important; }
         .goog-te-banner-frame { display: none !important; }
         .skiptranslate iframe { display: none !important; }
         #goog-gt-tt, .goog-te-balloon-frame { display: none !important; }
         .goog-text-highlight { background-color: transparent !important; box-shadow: none !important; }
+        
+        /* FIX TRANSLATE: Jangan gunakan display: none, gunakan opacity 0 dan pindahkan ke luar layar agar Google API tetap jalan */
         #google_translate_element { opacity: 0; position: absolute; left: -9999px; z-index: -999; }
 
         /* ================= ANIMATION ================= */
         .fade-up {
             opacity: 0;
             transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.8s ease;
         }
         .fade-up.show {
             opacity: 1;
@@ -93,35 +79,61 @@
 
         /* ================= CARD & IMAGE HOVER ================= */
         .img-hover { overflow: hidden; }
-        .img-hover img { transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+        .img-hover img { transition: 0.5s ease; }
         .img-hover:hover img { transform: scale(1.1); }
 
         /* ================= FLOAT WA ================= */
         .float-wa {
             position: fixed;
-            bottom: 25px;
-            right: 25px;
-            width: 65px;
-            height: 65px;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
             background: #25d366;
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-            z-index: 90;
-            font-size: 35px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 90; /* Di bawah modal */
+            font-size: 30px;
             text-decoration: none;
             transition: 0.3s;
         }
-        .float-wa:hover { transform: scale(1.15) rotate(10deg); }
+        .float-wa:hover { transform: scale(1.15); }
 
-        ::-webkit-scrollbar { width: 12px; }
-        ::-webkit-scrollbar-track { background: #f1f5f9; }
-        ::-webkit-scrollbar-thumb { background: #14b8a6; border-radius: 6px; }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #14b8a6; border-radius: 5px; }
 
+        /* Disable scroll saat modal terbuka */
         body.modal-open { overflow: hidden; }
+
+        /* ================= HERO BACKGROUND VIDEO ================= */
+        #home {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 60px;
+        }
+
+        #video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            transform: translateX(-50%) translateY(-50%);
+            object-fit: cover;
+        }
     </style>
 </head>
 
@@ -129,144 +141,172 @@
 
 <div id="google_translate_element"></div>
 
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-lg shadow-sm h-20 flex items-center border-b border-teal-100">
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-md h-20 flex items-center">
         <div class="max-w-7xl mx-auto w-full flex justify-between items-center px-4 relative">
             
             <a href="#home" class="flex items-center hover:opacity-80 transition">
                 <img src="images/logo.png" alt="Grand Rinjani Logo" class="h-12 w-12 md:h-14 md:w-14 object-cover rounded-full border-2 border-teal-500 shadow-sm mr-3">
-                <span class="font-extrabold text-2xl text-teal-600 tracking-tight">Grand Rinjani</span>
+                <span class="font-bold text-xl md:text-2xl text-teal-600 tracking-wide">Grand Rinjani</span>
+            
             </a>
 
             <div class="hidden lg:flex gap-8 items-center">
-                <a href="#home" class="hover:text-amber-500 font-bold text-gray-700 transition">Home</a>
-                <a href="#about" class="hover:text-amber-500 font-bold text-gray-700 transition">Our Story</a>
-                <a href="#packages" class="hover:text-amber-500 font-bold text-gray-700 transition">Trekking</a>
-                <a href="#extensions" class="hover:text-amber-500 font-bold text-gray-700 transition">Tours</a>
-                <a href="#gallery" class="hover:text-amber-500 font-bold text-gray-700 transition">Gallery</a>
-                <a href="transport.html" class="hover:text-amber-500 font-bold text-gray-700 transition">Transport</a>
+                <a href="#home" class="hover:text-teal-500 font-bold text-gray-800 transition">Home</a>
+                <a href="#about" class="hover:text-teal-500 font-bold text-gray-800 transition">Our Story</a>
+                <a href="#packages" class="hover:text-teal-500 font-bold text-gray-800 transition">Trekking</a>
+                <a href="#extensions" class="hover:text-teal-500 font-bold text-gray-800 transition">Tours</a>
+                <a href="transport.html" class="hover:text-teal-500 font-bold text-gray-800 transition">Transport</a>
+                <a href="#gallery" class="hover:text-teal-500 font-bold text-gray-800 transition">Gallery</a>
+                <a href="#contact" class="hover:text-teal-500 font-bold text-gray-800 transition">Booking</a>
             </div>
 
-            <div class="flex items-center gap-4">
-                <select onchange="changeLanguage(this.value)" class="cursor-pointer border-2 border-teal-200 font-bold px-3 py-1.5 rounded-full bg-teal-50 text-teal-800 text-sm outline-none shadow-sm hover:bg-teal-100 transition">
+            <div class="flex items-center gap-3">
+                <select onchange="changeLanguage(this.value)" class="cursor-pointer border-2 border-teal-300 font-bold px-2 py-1.5 rounded-md bg-teal-50 text-teal-900 text-sm outline-none shadow-sm">
                     <option value="id">🇮🇩 ID</option>
                     <option value="en">🇬🇧 EN</option>
                     <option value="zh-CN">🇨🇳 CN</option>
                     <option value="es">🇪🇸 ES</option>
                     <option value="fr">🇫🇷 FR</option>
                     <option value="de">🇩🇪 DE</option>
+                    <option value="ar">🇸🇦 AR</option>
+                    <option value="ru">🇷🇺 RU</option>
                     <option value="ja">🇯🇵 JA</option>
+                    <option value="ko">🇰🇷 KO</option>
                 </select>
 
-                <button onclick="toggleMobileMenu()" class="lg:hidden text-teal-600 focus:outline-none p-1">
+               <button onclick="toggleMobileMenu()" class="lg:hidden text-teal-600 focus:outline-none p-1">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
 
-            <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white border-t-2 border-teal-100 shadow-2xl lg:hidden transition-all duration-300 rounded-b-3xl">
-                <div class="flex flex-col p-6 space-y-5 font-extrabold text-gray-700 text-lg text-center">
+            <div id="mobile-menu" class="hidden absolute top-20 left-0 w-full bg-white border-t-2 border-teal-100 shadow-2xl lg:hidden transition-all duration-300">
+                <div class="flex flex-col p-5 space-y-5 font-extrabold text-gray-800 text-lg text-center">
                     <a href="#home" class="mobile-link hover:text-teal-600">Home</a>
                     <a href="#about" class="mobile-link hover:text-teal-600">Our Story</a>
                     <a href="#packages" class="mobile-link hover:text-teal-600">Trekking Packages</a>
                     <a href="#extensions" class="mobile-link hover:text-teal-600">Lombok Tours</a>
-                    <a href="#gallery" class="mobile-link hover:text-teal-600">Gallery</a>
                     <a href="transport.html" class="mobile-link hover:text-teal-600">Transport Service</a>
-                    <a href="#contact" class="mobile-link bg-amber-400 text-white rounded-full py-2 shadow-md">Book Now</a>
+                    <a href="#gallery" class="mobile-link hover:text-teal-600">Gallery</a>
+                    <a href="#contact" class="mobile-link text-white bg-amber-400 rounded-full py-2 shadow-md">Book Now</a>
                 </div>
             </div>
             
         </div>
     </nav>
 
+
     <div id="detail-modal" class="fixed inset-0 z-[100] bg-white hidden overflow-y-auto transition-opacity duration-300 opacity-0">
-        <div class="sticky top-0 w-full bg-white/95 backdrop-blur-md border-b-2 border-teal-100 p-4 flex justify-between items-center z-50">
-            <h2 id="modal-title" class="text-2xl font-black text-teal-700">Package Details</h2>
-            <button onclick="closeModal()" class="bg-rose-100 text-rose-600 hover:bg-rose-500 hover:text-white rounded-full px-4 py-2 font-bold flex items-center gap-2 transition">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                Close
+        <div class="sticky top-0 w-full bg-white/90 backdrop-blur-md border-b-2 border-teal-100 p-4 flex justify-between items-center z-50">
+            <h2 id="modal-title" class="text-2xl font-extrabold text-teal-600">Detail Paket</h2>
+            <button onclick="closeModal()" class="bg-red-100 text-red-600 hover:bg-red-500 hover:text-white rounded-full p-2 font-bold flex items-center gap-2 transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                Tutup
             </button>
         </div>
         
         <div class="max-w-4xl mx-auto p-6 md:p-10 pb-32">
-            <div id="modal-content" class="text-gray-800"></div>
-            <div class="mt-12 text-center bg-teal-50 rounded-3xl p-8 border-2 border-teal-100">
-                <h3 class="text-2xl font-black text-teal-800 mb-2">Ready for the adventure of a lifetime?</h3>
-                <p class="text-gray-500 mb-6 font-bold">Secure your VIP slot today.</p>
-                <button onclick="closeAndBook()" class="bg-amber-400 hover:bg-amber-500 text-white font-black text-lg py-4 px-10 rounded-full shadow-[0_10px_20px_rgba(251,191,36,0.3)] transition transform hover:-translate-y-1 inline-flex items-center gap-2">
-                    Book This Experience
+            <div id="modal-content" class="text-gray-800">
+                </div>
+            
+            <div class="mt-12 text-center border-t-2 border-gray-100 pt-8">
+                <p class="text-gray-500 mb-4 font-bold">Tertarik dengan paket ini?</p>
+                <button onclick="closeAndBook()" class="bg-teal-500 hover:bg-teal-600 text-white font-extrabold py-4 px-10 rounded-xl shadow-xl transition transform hover:-translate-y-1 inline-flex items-center gap-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    Booking Sekarang
                 </button>
             </div>
         </div>
     </div>
 
-    <section id="home" class="h-screen relative overflow-hidden">
-        <div class="hero-overlay"></div>
-        <div class="absolute inset-0 bg-[url('images/rinjani1.jpeg')] bg-cover bg-center mix-blend-overlay opacity-60"></div>
-        
-        <div class="text-center px-4 z-10 w-full mb-10 mt-20">
-            <span class="inline-block bg-teal-500 text-white font-black px-4 py-1 rounded-full text-sm mb-6 tracking-widest shadow-lg uppercase">Global Standard Trekking</span>
-            <h1 class="text-4xl md:text-6xl font-black text-white drop-shadow-lg max-w-4xl mx-auto leading-tight tracking-tight text-shadow-md">
-                Elevate Your Adventure <br> to the <span class="text-amber-400">Pinnacle of Lombok.</span>
-            </h1>
-            <p class="mt-6 text-lg md:text-xl font-bold text-white max-w-2xl mx-auto drop-shadow-md">
-                Grand Rinjani offers world-class, eco-friendly VIP trekking experiences. Discover nature's masterpiece with unparalleled comfort.
-            </p>
-            <div class="mt-10">
-                <a href="#packages" class="bg-amber-400 text-white font-black px-8 py-4 rounded-full text-lg shadow-[0_10px_20px_rgba(251,191,36,0.4)] hover:bg-amber-500 hover:-translate-y-1 transition transform inline-block">Explore Packages</a>
-            </div>
+<section id="home">
+    <video autoplay loop muted playsinline id="video-bg">
+        <source src="images/video-bg.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    
+    <div class="text-center px-4 z-10 w-full mb-10">
+        <span class="inline-block bg-teal-500 text-white font-black px-4 py-1 rounded-full text-sm mb-6 tracking-widest shadow-lg uppercase">Global Standard Trekking</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 drop-shadow-sm max-w-4xl mx-auto leading-tight tracking-tight">
+            Siapkan Dirimu untuk terbang Tanpa batas <br>
+            <span class="text-amber-500">Menjelajahi setiap Sudut Pulau Lombok.</span>
+        </h1>
+        <p class="mt-6 text-lg md:text-xl font-bold text-gray-700 max-w-2xl mx-auto">
+            Grand Rinjani offers world-class, eco-friendly VIP trekking experiences. Discover nature's masterpiece with unparalleled comfort.
+        </p>
+        <div class="mt-10">
+            <a href="#packages" class="bg-amber-400 text-white font-black px-8 py-4 rounded-full text-lg shadow-[0_10px_20px_rgba(251,191,36,0.4)] hover:bg-amber-500 hover:-translate-y-1 transition transform inline-block">Explore Packages</a>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <section id="about" class="py-24 fade-up bg-white">
-        <div class="max-w-7xl mx-auto px-4">
+        <div class="max-w-7xl mx-auto px-4 bg-white rounded-3xl p-8 md:p-12 shadow-2xl border-2 border-gray-100">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-black mb-4 text-teal-800 tracking-tight">The Grand Experience</h2>
-                <div class="w-24 h-2 bg-amber-400 mx-auto rounded-full"></div>
+                <h2 class="text-4xl font-extrabold mb-4 text-teal-900">About Grand Rinjani</h2>
+                <div class="w-24 h-1 bg-amber-400 mx-auto rounded"></div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
-                <div class="img-hover rounded-3xl overflow-hidden shadow-2xl relative">
-                    <div class="absolute top-6 left-6 bg-amber-400 text-white text-sm font-black px-4 py-2 rounded-full z-10 shadow-lg uppercase tracking-wider">🌿 Eco-Certified</div>
-                    <img src="images/3d1n.jpeg" alt="Rinjani Premium Trekking" loading="lazy" class="w-full h-[500px] object-cover">
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-20">
+                <div class="img-hover rounded-2xl overflow-hidden shadow-xl border-4 border-teal-100 relative">
+                    <div class="absolute top-4 left-4 bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full z-10 shadow-md uppercase tracking-wider">🌿 Eco-Friendly</div>
+                    <img src="images/2d1n.jpeg" alt="Rinjani Trekking VIP Experience" class="w-full h-[500px] object-cover">
                 </div>
 
                 <div>
-                    <h3 class="text-3xl font-black mb-6 text-teal-700 leading-snug">World-Class Hospitality, <br>Above the Clouds.</h3>
-                    <p class="font-bold text-gray-600 mb-5 text-lg leading-relaxed">
-                        Grand Rinjani sets the global benchmark for mountain expeditions. We seamlessly blend the thrill of conquering Indonesia's second-highest volcano with the luxury of VIP services.
+                    <h3 class="text-3xl font-extrabold mb-4 text-teal-700">Premium & Eco-Friendly Trekking</h3>
+                    <p class="font-bold text-gray-700 mb-4 text-lg">
+                        Grand Rinjani bukan sekadar penyelenggara pendakian, kami berkomitmen pada kualitas VIP dan kelestarian alam Gunung Rinjani.
                     </p>
-                    <p class="font-bold text-gray-500 mb-8 leading-relaxed">
-                        Enjoy deep sleep in our premium windproof tents, savor gourmet meals prepared by our mountain chefs, and appreciate absolute privacy with our dedicated toilet tents. Furthermore, we proudly champion the "Clean Up Rinjani" initiative, leaving no footprint behind.
+                    <p class="font-bold text-gray-600 mb-6 leading-relaxed">
+                        Nikmati tidur nyenyak di tenda premium kami, santapan hangat berstandar hotel yang dimasak langsung oleh chef gunung kami, serta toilet tenda privat untuk kenyamanan maksimal Anda. Kami juga menjalankan program "Clean Up Rinjani" dengan membawa turun kembali seluruh sampah ekspedisi.
                     </p>
-                    <div class="flex gap-4">
-                        <div class="bg-teal-50 px-6 py-4 rounded-2xl border border-teal-100">
-                            <span class="block text-3xl font-black text-teal-600 mb-1">100%</span>
-                            <span class="text-sm font-bold text-gray-500">Safety Record</span>
-                        </div>
-                        <div class="bg-amber-50 px-6 py-4 rounded-2xl border border-amber-100">
-                            <span class="block text-3xl font-black text-amber-500 mb-1">VIP</span>
-                            <span class="text-sm font-bold text-gray-500">Camping Gear</span>
-                        </div>
-                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mb-10">
+                <h3 class="text-3xl font-extrabold text-teal-900">Our Professional Team</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-teal-50 border-2 border-teal-300 p-6 rounded-2xl text-center shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <img src="images/logo.png" class="h-16 w-16 mx-auto rounded-full border-2 border-teal-500 mb-4 shadow-md object-cover">
+                    <h4 class="font-extrabold text-2xl text-teal-900 mb-1">Rudi</h4>
+                    <p class="font-bold text-teal-600">Licensed Guide</p>
+                    <p class="font-bold text-sm text-gray-600 mt-3">Menguasai P3K (First Aid) dan bersertifikat resmi. Keselamatan Anda adalah misi utamanya.</p>
+                </div>
+                <div class="bg-teal-50 border-2 border-teal-300 p-6 rounded-2xl text-center shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <img src="images/rinjani7.jpeg" class="h-16 w-16 mx-auto rounded-full object-cover border-2 border-teal-500 mb-4 shadow-md">
+                    <h4 class="font-extrabold text-2xl text-teal-900 mb-1">Tim Porter</h4>
+                    <p class="font-bold text-teal-600">The Real Heroes</p>
+                    <p class="font-bold text-sm text-gray-600 mt-3">Membawa seluruh peralatan logistik, mendirikan tenda, dan memasak hidangan bergizi tinggi untuk Anda.</p>
+                </div>
+                <div class="bg-teal-50 border-2 border-teal-300 p-6 rounded-2xl text-center shadow-lg hover:shadow-xl transition transform hover:-translate-y-2">
+                    <img src="images/logo.png" class="h-16 w-16 mx-auto rounded-full border-2 border-teal-500 mb-4 shadow-md object-cover">
+                    <h4 class="font-extrabold text-2xl text-teal-900 mb-1">Basecamp</h4>
+                    <p class="font-bold text-teal-600">Support System</p>
+                    <p class="font-bold text-sm text-gray-600 mt-3">Mengatur penjemputan, penginapan hotel sebelum pendakian, dan memastikan detail perjalanan sempurna.</p>
                 </div>
             </div>
         </div>
     </section>
 
+
     <section id="packages" class="py-24 fade-up bg-teal-50">
-        <div class="max-w-7xl mx-auto px-4">
+        <div class="max-w-7xl mx-auto px-4 bg-teal-50 rounded-3xl p-8 md:p-12 shadow-2xl border-4 border-teal-200">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-black mb-4 text-teal-800 tracking-tight">Signature Expeditions</h2>
-                <p class="font-bold text-gray-600 max-w-2xl mx-auto text-lg">
-                    All-inclusive, fully guided masterpieces. Designed for those who demand excellence in every step.
+                <h2 class="text-4xl font-extrabold mb-4 text-teal-900">Premium Trekking Packages</h2>
+                <p class="font-bold text-gray-600 max-w-2xl mx-auto">
+                    Seluruh paket kami sudah ALL-INCLUSIVE (Transport, Hotel 1 malam sebelum mendaki, Tiket Taman Nasional, Porter, Makanan 3x Sehari, dan Peralatan Kemah Premium).
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div onclick="openDetail('p1', '2D/1N Summit Sprint')" class="bg-white rounded-3xl overflow-hidden cursor-pointer shadow-xl hover:shadow-2xl transition transform hover:-translate-y-2 flex flex-col group border-2 border-transparent hover:border-teal-400">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div onclick="openDetail('p1', '2D/1N Summit Sprint')" class="bg-white rounded-3xl overflow-hidden cursor-pointer shadow-xl hover:shadow-2xl transition transform hover:scale-105 flex flex-col group border-2 border-transparent hover:border-teal-400">
                     <div class="img-hover h-80 relative">
-                        <img src="images/2d1n.jpeg" alt="2D1N Rinjani" loading="lazy" class="w-full h-full object-cover">
+                        <img src="images/rinjani9.jpeg" alt="2D1N Rinjani Trekking" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-80 group-hover:opacity-60 transition"></div>
                         <div class="absolute bottom-6 left-6 right-6">
                             <span class="bg-rose-500 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-md mb-2 inline-block">Advanced</span>
@@ -279,10 +319,10 @@
                     </div>
                 </div>
 
-                <div onclick="openDetail('p2', '3D/2N The Classic Grand')" class="bg-white rounded-3xl overflow-hidden cursor-pointer shadow-[0_20px_40px_rgba(20,184,166,0.15)] hover:shadow-[0_20px_50px_rgba(20,184,166,0.3)] transition transform hover:-translate-y-2 flex flex-col relative group border-2 border-teal-500 scale-105 z-10">
+                <div onclick="openDetail('p2', '3D/2N The Classic Grand')" class="bg-white rounded-3xl overflow-hidden cursor-pointer shadow-[0_20px_40px_rgba(20,184,166,0.15)] hover:shadow-[0_20px_50px_rgba(20,184,166,0.3)] transition transform hover:scale-105 flex flex-col relative group border-2 border-teal-500 z-10 scale-105">
                     <div class="absolute top-6 right-0 bg-amber-400 text-white font-black px-5 py-2 rounded-l-full z-10 shadow-lg tracking-widest text-sm">BEST SELLER</div>
                     <div class="img-hover h-80 relative">
-                        <img src="images/3d2n.jpeg" alt="3D2N Rinjani" loading="lazy" class="w-full h-full object-cover">
+                        <img src="images/rinjani6.jpeg" alt="3D2N Rinjani Trekking" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-80 group-hover:opacity-60 transition"></div>
                         <div class="absolute bottom-6 left-6 right-6">
                             <span class="bg-teal-500 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-md mb-2 inline-block">Moderate</span>
@@ -295,9 +335,9 @@
                     </div>
                 </div>
 
-                <div onclick="openDetail('p3', '4D/3N The Ultimate Leisure')" class="bg-white rounded-3xl overflow-hidden cursor-pointer shadow-xl hover:shadow-2xl transition transform hover:-translate-y-2 flex flex-col group border-2 border-transparent hover:border-teal-400">
+                <div onclick="openDetail('p3', '4D/3N Ultimate Leisure')" class="bg-white rounded-3xl overflow-hidden cursor-pointer shadow-xl hover:shadow-2xl transition transform hover:scale-105 flex flex-col group border-2 border-transparent hover:border-teal-400">
                     <div class="img-hover h-80 relative">
-                        <img src="images/4d3n.jpeg" alt="4D3N Rinjani" loading="lazy" class="w-full h-full object-cover">
+                        <img src="images/rinjani4.jpeg" alt="4D3N Rinjani Trekking" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-80 group-hover:opacity-60 transition"></div>
                         <div class="absolute bottom-6 left-6 right-6">
                             <span class="bg-sky-500 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider shadow-md mb-2 inline-block">Relaxed</span>
@@ -309,37 +349,54 @@
                         <button class="w-full bg-teal-50 text-teal-700 border-2 border-teal-200 font-black py-3 rounded-full group-hover:bg-teal-500 group-hover:text-white group-hover:border-teal-500 transition shadow-sm">VIEW ITINERARY</button>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="extensions" class="py-24 relative fade-up bg-white">
+            </div> </div> 
+   </section>
+   <section id="extensions" class="py-24 relative fade-up bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-black mb-4 text-teal-800 tracking-tight">Beyond The Mountain</h2>
                 <div class="w-24 h-2 bg-amber-400 mx-auto rounded-full mb-6"></div>
                 <p class="font-bold text-gray-500 max-w-2xl mx-auto text-lg">
-                    Extend your Grand Rinjani experience with our premium island tours. Discover the hidden gems of Lombok in absolute comfort.
+                    Lengkapi petualangan Anda dengan eksplorasi premium ke surga tersembunyi Lombok. Dari air terjun magis hingga warisan leluhur.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div onclick="openDetail('ext_waterfall', 'Lombok Waterfalls Tour')" class="cursor-pointer bg-teal-50 border-2 border-teal-100 p-8 rounded-3xl text-center hover:bg-teal-500 transition transform hover:-translate-y-2 shadow-lg group">
-                    <div class="text-6xl mb-6 transform group-hover:scale-110 transition">🌊</div>
-                    <h3 class="text-2xl font-black text-teal-900 group-hover:text-white mb-2 transition">Mystic Waterfalls</h3>
-                    <p class="font-bold text-gray-500 group-hover:text-teal-100 transition">Sindang Gile & Tiu Kelep</p>
+                <div onclick="openDetail('ext_waterfall', 'Lombok Mystic Waterfalls')" class="cursor-pointer bg-teal-50 border-2 border-teal-100 rounded-3xl overflow-hidden hover:border-teal-400 transition transform hover:-translate-y-2 shadow-xl group flex flex-col">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="images/air_terjun.jpeg" alt="Air Terjun Benang Kelambu" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-teal-900/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-4xl">🌊</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow text-center">
+                        <h3 class="text-2xl font-black text-teal-900 group-hover:text-teal-600 mb-2 transition">Mystic Waterfalls</h3>
+                        <p class="font-bold text-gray-500 text-sm">Eksplorasi kesegaran abadi di Air Terjun Benang Kelambu & Tiu Kelep.</p>
+                    </div>
                 </div>
 
-                <div onclick="openDetail('ext_sembalun', 'Panorama Sembalun Tour')" class="cursor-pointer bg-teal-50 border-2 border-teal-100 p-8 rounded-3xl text-center hover:bg-teal-500 transition transform hover:-translate-y-2 shadow-lg group">
-                    <div class="text-6xl mb-6 transform group-hover:scale-110 transition">⛰️</div>
-                    <h3 class="text-2xl font-black text-teal-900 group-hover:text-white mb-2 transition">Highland Panorama</h3>
-                    <p class="font-bold text-gray-500 group-hover:text-teal-100 transition">Sembalun Valley</p>
+                <div onclick="openDetail('ext_sembalun', 'Sembalun Seven Summits')" class="cursor-pointer bg-teal-50 border-2 border-teal-100 rounded-3xl overflow-hidden hover:border-teal-400 transition transform hover:-translate-y-2 shadow-xl group flex flex-col">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="images/rinjani6.jpeg" alt="Bukit Pergasingan Sembalun" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-teal-900/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-4xl">⛰️</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow text-center">
+                        <h3 class="text-2xl font-black text-teal-900 group-hover:text-teal-600 mb-2 transition">Sembalun Hills</h3>
+                        <p class="font-bold text-gray-500 text-sm">Taklukkan panorama epik Bukit Pergasingan, Jaran Kurus, dan Bukit Nanggi.</p>
+                    </div>
                 </div>
 
-                <div onclick="openDetail('ext_sasak', 'Sasak Culture Tour')" class="cursor-pointer bg-teal-50 border-2 border-teal-100 p-8 rounded-3xl text-center hover:bg-teal-500 transition transform hover:-translate-y-2 shadow-lg group">
-                    <div class="text-6xl mb-6 transform group-hover:scale-110 transition">🛖</div>
-                    <h3 class="text-2xl font-black text-teal-900 group-hover:text-white mb-2 transition">Cultural Heritage</h3>
-                    <p class="font-bold text-gray-500 group-hover:text-teal-100 transition">Sasak Village & Kuta</p>
+                <div onclick="openDetail('ext_sasak', 'Bayan Heritage & Sasak Culture')" class="cursor-pointer bg-teal-50 border-2 border-teal-100 rounded-3xl overflow-hidden hover:border-teal-400 transition transform hover:-translate-y-2 shadow-xl group flex flex-col">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="images/masjid-kuno.jpeg" alt="Masjid Kuno Bayan" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-teal-900/80 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 text-4xl">🛖</div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow text-center">
+                        <h3 class="text-2xl font-black text-teal-900 group-hover:text-teal-600 mb-2 transition">Heritage Tour</h3>
+                        <p class="font-bold text-gray-500 text-sm">Jelajahi situs bersejarah Masjid Kuno Bayan warisan leluhur & Desa Adat Sasak.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -356,14 +413,14 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="img-hover rounded-2xl overflow-hidden shadow-lg"><img src="images/galeri_1.jpeg" loading="lazy" alt="Gallery 1" class="w-full h-48 object-cover"></div>
-                <div class="img-hover rounded-2xl overflow-hidden shadow-lg"><img src="images/galeri_2.jpeg" loading="lazy" alt="Gallery 2" class="w-full h-48 object-cover"></div>
-                <div class="img-hover rounded-2xl overflow-hidden shadow-lg"><img src="images/galeri_3.jpeg" loading="lazy" alt="Gallery 3" class="w-full h-48 object-cover"></div>
-                <div class="img-hover rounded-2xl overflow-hidden shadow-lg"><img src="images/galeri_4.jpeg" loading="lazy" alt="Gallery 4" class="w-full h-48 object-cover"></div>
-                <div class="img-hover rounded-2xl overflow-hidden shadow-lg"><img src="images/galeri_5.jpeg" loading="lazy" alt="Gallery 5" class="w-full h-48 object-cover"></div>
-                <div class="img-hover rounded-2xl overflow-hidden shadow-lg"><img src="images/galeri_6.jpeg" loading="lazy" alt="Gallery 6" class="w-full h-48 object-cover"></div>
-                <div class="img-hover rounded-2xl overflow-hidden shadow-lg"><img src="images/galeri_7.jpeg" loading="lazy" alt="Gallery 7" class="w-full h-48 object-cover"></div>
-                <div class="img-hover rounded-2xl overflow-hidden shadow-lg"><img src="images/rinjani10.jpeg" loading="lazy" alt="Gallery 8" class="w-full h-48 object-cover"></div>
+                <div class="img-hover rounded-2xl overflow-hidden shadow-lg"><img src="images/image_466c3f.png" loading="lazy" alt="Grand Rinjani 1" class="w-full h-48 object-cover"></div>
+                <div class="img-hover rounded-2xl overflow-hidden shadow-lg"><img src="images/image_466c81.png" loading="lazy" alt="Grand Rinjani 2" class="w-full h-48 object-cover"></div>
+                <div class="img-hover rounded-2xl overflow-hidden shadow-lg"><img src="images/image_466cbb.png" loading="lazy" alt="Grand Rinjani 3" class="w-full h-48 object-cover"></div>
+                <div class="img-hover rounded-2xl overflow-hidden shadow-lg"><img src="images/image_4583c6.png" loading="lazy" alt="Grand Rinjani 4" class="w-full h-48 object-cover"></div>
+                <div class="img-hover rounded-2xl overflow-hidden shadow-lg"><img src="images/image_458402.png" loading="lazy" alt="Grand Rinjani 5" class="w-full h-48 object-cover"></div>
+                <div class="img-hover rounded-2xl overflow-hidden shadow-lg"><img src="images/image_45843e.png" loading="lazy" alt="Grand Rinjani 6" class="w-full h-48 object-cover"></div>
+                <div class="img-hover rounded-2xl overflow-hidden shadow-lg"><img src="images/air_terjun.jpeg" loading="lazy" alt="Air Terjun" class="w-full h-48 object-cover"></div>
+                <div class="img-hover rounded-2xl overflow-hidden shadow-lg"><img src="images/masjid-kuno.jpeg" loading="lazy" alt="Masjid Kuno" class="w-full h-48 object-cover"></div>
             </div>
             
             <div class="text-center mt-16">
@@ -405,9 +462,9 @@
                                 <option value="4D/3N Ultimate Leisure">4D/3N Ultimate Leisure</option>
                             </optgroup>
                             <optgroup label="Lombok Extra Tours">
-                                <option value="Lombok Waterfalls Tour">Lombok Waterfalls Tour</option>
-                                <option value="Panorama Sembalun Tour">Panorama Sembalun Tour</option>
-                                <option value="Sasak Culture Tour">Sasak Culture Tour</option>
+                                <option value="Lombok Mystic Waterfalls">Lombok Mystic Waterfalls (Benang Kelambu)</option>
+                                <option value="Sembalun Seven Summits">Sembalun Hills (Pergasingan/Nanggi)</option>
+                                <option value="Bayan Heritage & Sasak Culture">Bayan Heritage & Sasak Culture</option>
                             </optgroup>
                         </select>
                     </div>
@@ -465,6 +522,7 @@
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
 
     <script>
+        // Data ITINERARY UPDATED DENGAN DESKRIPSI TOUR BARU
         const detailData = {
             p1: `
                 <div class="mb-8">
@@ -544,15 +602,18 @@
             `,
             ext_waterfall: `
                 <h3 class="text-3xl font-black text-teal-900 mb-6">Lombok Mystic Waterfalls</h3>
-                <p class="font-bold text-gray-600 mb-4 leading-relaxed">Located at the foothills of Mount Rinjani. Enjoy a light trek through the tropical forest to witness the majestic Tiu Kelep waterfall, believed by locals to keep you forever young.</p>
+                <img src="images/air_terjun.jpeg" class="w-full h-64 object-cover rounded-2xl mb-6 shadow-md">
+                <p class="font-bold text-gray-600 mb-4 leading-relaxed">Jelajahi keajaiban alam di kaki Gunung Rinjani. Nikmati *jungle trekking* menyegarkan menuju Air Terjun Benang Kelambu yang eksotis (air mengalir halus layaknya kelambu) serta pesona magis Air Terjun Tiu Kelep di Senaru.</p>
             `,
             ext_sembalun: `
-                <h3 class="text-3xl font-black text-teal-900 mb-6">Panorama Sembalun</h3>
-                <p class="font-bold text-gray-600 mb-4 leading-relaxed">Ideal for those who want to experience the mountain air without the extreme hike. Visit Selong Hill for exotic farm views and pick fresh strawberries directly from local gardens.</p>
+                <h3 class="text-3xl font-black text-teal-900 mb-6">Sembalun Seven Summits</h3>
+                <img src="images/rinjani6.jpeg" class="w-full h-64 object-cover rounded-2xl mb-6 shadow-md">
+                <p class="font-bold text-gray-600 mb-4 leading-relaxed">Selain Rinjani, rasakan sensasi menaklukkan bukit-bukit ikonik di lembah Sembalun. Pilih petualangan Anda melintasi Bukit Pergasingan yang spektakuler, Bukit Jaran Kurus yang menantang, atau keindahan di atas awan Bukit Nanggi.</p>
             `,
             ext_sasak: `
-                <h3 class="text-3xl font-black text-teal-900 mb-6">Sasak Cultural Heritage</h3>
-                <p class="font-bold text-gray-600 mb-4 leading-relaxed">Immerse yourself in Lombok's traditions. Visit Sade Village, witness traditional hand-weaving, and relax on the pristine white sands of Kuta Mandalika Beach.</p>
+                <h3 class="text-3xl font-black text-teal-900 mb-6">Bayan Heritage & Sasak Culture</h3>
+                <img src="images/masjid-kuno.jpeg" class="w-full h-64 object-cover rounded-2xl mb-6 shadow-md">
+                <p class="font-bold text-gray-600 mb-4 leading-relaxed">Selami warisan leluhur Lombok yang tak lekang oleh waktu. Kunjungi Masjid Kuno Bayan, saksi bisu sejarah penyebaran Islam berabad-abad lalu dengan arsitektur bambu dan ilalang yang otentik. Lanjutkan dengan mengunjungi Desa Adat Sasak untuk melihat langsung cara hidup tradisional yang masih terjaga.</p>
             `
         };
 
