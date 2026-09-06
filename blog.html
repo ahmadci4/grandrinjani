@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Trekking Tips | Grand Rinjani</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Essential tips, packing lists, and stories from Mount Rinjani. Prepare for your ultimate trekking expedition with guides from our local experts.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#047857', 
+                        brandDark: '#064e3b',
+                        accent: '#d97706', 
+                        accentLight: '#f59e0b',
+                        textMain: '#1f2937',
+                        textMuted: '#4b5563'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(17, 24, 39, 0.6), rgba(17, 24, 39, 0.9));
+        }
+        .nav-transition {
+            transition: all 0.3s ease-in-out;
+        }
+        #mobile-menu {
+            transition: transform 0.4s ease;
+            transform: translateX(100%);
+        }
+        #mobile-menu.open {
+            transform: translateX(0);
+        }
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="font-sans text-textMuted bg-gray-50 antialiased overflow-x-hidden">
+
+    <!-- HEADER / NAVIGATION -->
+    <header id="main-nav" class="fixed top-0 left-0 w-full z-50 nav-transition bg-white shadow-md py-3">
+        <div class="container mx-auto px-6 lg:px-16 flex items-center justify-between">
+            
+            <a href="index.html" class="flex items-center gap-2 z-50">
+                <div class="text-2xl font-extrabold text-brand tracking-widest drop-shadow-md" id="logo-text">
+                    GRAND<span class="text-accentLight">RINJANI</span>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-textMain" id="desktop-links">
+                <a href="index.html" class="hover:text-accentLight transition-colors pb-1">HOME</a>
+                <a href="packages.html" class="hover:text-accentLight transition-colors pb-1">PACKAGES</a>
+                <a href="transport.html" class="hover:text-accentLight transition-colors pb-1">TRANSPORT</a>
+                <a href="blog.html" class="hover:text-accentLight transition-colors text-brand border-b-2 border-brand pb-1">BLOG & TIPS</a>
+                <a href="about.html" class="hover:text-accentLight transition-colors pb-1">ABOUT US</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center">
+                <a href="https://wa.me/6281234567890" target="_blank" class="bg-accent hover:bg-accentLight text-white px-7 py-2.5 rounded-full font-bold text-sm tracking-wide shadow-lg transition-all">
+                    PLAN YOUR TREK
+                </a>
+            </div>
+
+            <button id="hamburger-btn" class="lg:hidden text-brand z-50 p-2">
+                <i class="ph ph-list text-3xl font-bold" id="menu-icon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 lg:hidden flex flex-col items-center justify-center pt-16">
+        <nav class="flex flex-col items-center gap-6 text-textMain font-bold text-xl w-full px-6">
+            <a href="index.html" class="mobile-link hover:text-brand border-b border-gray-100 w-full text-center py-3">Home</a>
+            <a href="packages.html" class="mobile-link hover:text-brand border-b border-gray-100 w-full text-center py-3">Packages</a>
+            <a href="transport.html" class="mobile-link hover:text-brand border-b border-gray-100 w-full text-center py-3">Transport</a>
+            <a href="blog.html" class="mobile-link text-brand border-b border-gray-100 w-full text-center py-3">Blog & Tips</a>
+            <a href="about.html" class="mobile-link hover:text-brand border-b border-gray-100 w-full text-center py-3">About Us</a>
+        </nav>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 flex items-center justify-center w-full bg-cover bg-center mt-16" style="background-image: url('https://images.unsplash.com/photo-1542662565-7e4fd1e57398?q=80&w=2000&auto=format&fit=crop');">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="container mx-auto px-6 lg:px-16 relative z-20 text-center">
+            <span class="text-accentLight font-bold tracking-widest uppercase text-sm mb-4 block">Insights & Guides</span>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4 drop-shadow-lg">
+                Trekking <span class="text-accentLight">Masterclass</span>
+            </h1>
+            <p class="text-gray-300 text-lg font-light max-w-2xl mx-auto drop-shadow-md">
+                Preparation is the key to a successful summit. Read our expert guides, packing lists, and inspirational stories to ensure you are ready for the adventure of a lifetime.
+            </p>
+        </div>
+    </section>
+
+    <!-- FEATURED ARTICLE -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6 lg:px-16">
+            <div class="flex flex-col lg:flex-row bg-gray-50 rounded-3xl overflow-hidden shadow-xl border border-gray-100 group">
+                <div class="w-full lg:w-1/2 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?q=80&w=1000&auto=format&fit=crop" alt="Packing for Rinjani" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 min-h-[300px]">
+                </div>
+                <div class="w-full lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
+                    <span class="inline-block px-3 py-1 bg-brand/10 text-brand font-bold text-xs uppercase tracking-wider rounded-full w-max mb-4">Featured Guide</span>
+                    <h2 class="text-3xl font-extrabold text-textMain mb-4 group-hover:text-brand transition-colors">The Ultimate Mount Rinjani Packing List for 2026</h2>
+                    <p class="text-textMuted leading-relaxed mb-6">
+                        Conquering Mount Rinjani requires the right gear. From thermal layers for the freezing summit winds to the best footwear for volcanic scree, our comprehensive checklist ensures you carry exactly what you need—and nothing you don't.
+                    </p>
+                    <div class="flex items-center justify-between mt-auto pt-6 border-t border-gray-200">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-white font-bold">GR</div>
+                            <div class="text-sm">
+                                <p class="font-bold text-textMain">Grand Rinjani Team</p>
+                                <p class="text-gray-400">5 min read</p>
+                            </div>
+                        </div>
+                        <a href="#" class="text-brand font-bold hover:text-brandDark transition-colors flex items-center gap-2">
+                            Read Article <i class="ph-bold ph-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECENT ARTICLES GRID -->
+    <section class="py-16 bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-6 lg:px-16">
+            <h3 class="text-2xl font-extrabold text-textMain mb-10">Latest Tips & Stories</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Article 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=800&auto=format&fit=crop" alt="Training" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-accent font-bold text-xs uppercase tracking-wider mb-2 block">Preparation</span>
+                        <h4 class="text-xl font-bold text-textMain mb-3 group-hover:text-brand transition-colors">Physical Training: How to Prepare for the Summit Attack</h4>
+                        <p class="text-sm text-textMuted mb-6 line-clamp-3 flex-grow">The trek to 3,726 meters is physically demanding. Discover the best cardiovascular and leg-strengthening exercises to start doing 3 months before your trip.</p>
+                        <a href="#" class="text-brand font-semibold hover:text-brandDark text-sm inline-flex items-center gap-1">Read More <i class="ph-bold ph-caret-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=800&auto=format&fit=crop" alt="Seasons" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-accent font-bold text-xs uppercase tracking-wider mb-2 block">Weather & Seasons</span>
+                        <h4 class="text-xl font-bold text-textMain mb-3 group-hover:text-brand transition-colors">Understanding Rinjani's Microclimate: When is the Best Time to Trek?</h4>
+                        <p class="text-sm text-textMuted mb-6 line-clamp-3 flex-grow">Dry season or shoulder season? Learn how the weather affects trail conditions, visibility, and temperature on the mountain to plan your perfect dates.</p>
+                        <a href="#" class="text-brand font-semibold hover:text-brandDark text-sm inline-flex items-center gap-1">Read More <i class="ph-bold ph-caret-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800&auto=format&fit=crop" alt="Eco Friendly" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-accent font-bold text-xs uppercase tracking-wider mb-2 block">Sustainability</span>
+                        <h4 class="text-xl font-bold text-textMain mb-3 group-hover:text-brand transition-colors">Leave No Trace: Our Commitment to Eco-Friendly Expeditions</h4>
+                        <p class="text-sm text-textMuted mb-6 line-clamp-3 flex-grow">Preserving the sacred Rinjani National Park is our top priority. Find out how Grand Rinjani manages waste and ensures a sustainable trekking environment.</p>
+                        <a href="#" class="text-brand font-semibold hover:text-brandDark text-sm inline-flex items-center gap-1">Read More <i class="ph-bold ph-caret-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-12 text-center">
+                <button class="bg-transparent border-2 border-brand text-brand hover:bg-brand hover:text-white font-bold py-3 px-8 rounded-full transition-all">
+                    Load More Articles
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white pt-20 pb-10">
+        <div class="container mx-auto px-6 lg:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="inline-block mb-6">
+                        <div class="text-2xl font-extrabold text-white tracking-widest">
+                            GRAND<span class="text-accentLight">RINJANI</span>
+                        </div>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        The leading provider of premium trekking services on Mount Rinjani. Delivering exclusive experiences with a strict priority on safety, comfort, and nature conservation.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white">Explore</h4>
+                    <ul class="space-y-3">
+                        <li><a href="packages.html" class="text-gray-400 hover:text-accentLight transition-colors text-sm">Trekking Packages</a></li>
+                        <li><a href="transport.html" class="text-gray-400 hover:text-accentLight transition-colors text-sm">Transport Services</a></li>
+                        <li><a href="blog.html" class="text-accentLight transition-colors text-sm font-medium">Blog & Trekking Tips</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-accentLight transition-colors text-sm">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="ph-fill ph-map-pin text-accent text-xl mt-0.5"></i>
+                            <span class="text-gray-400 text-sm">Jl. Pariwisata Senaru, Bayan, North Lombok, NTB, Indonesia</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="ph-fill ph-phone text-accent text-xl"></i>
+                            <a href="tel:+6281234567890" class="text-gray-400 hover:text-white transition-colors text-sm">+62 812-3456-7890</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-white">Book Instantly</h4>
+                    <a href="https://wa.me/6281234567890" target="_blank" class="inline-flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-3 px-6 rounded-xl transition-all mt-2">
+                        <i class="ph-fill ph-whatsapp-logo text-2xl"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row items-center justify-between">
+                <p class="text-gray-500 text-xs text-center md:text-left mb-4 md:mb-0">
+                    &copy; 2026 Grand Rinjani. All rights reserved. Designed for Premium Trekking.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.add('open');
+                menuIcon.classList.remove('ph-list');
+                menuIcon.classList.add('ph-x');
+            } else {
+                mobileMenu.classList.remove('open');
+                menuIcon.classList.remove('ph-x');
+                menuIcon.classList.add('ph-list');
+            }
+        }
+
+        hamburgerBtn.addEventListener('click', toggleMenu);
+    </script>
+</body>
+</html>

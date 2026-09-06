@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D1N Sembalun Summit Expedition | Grand Rinjani</title>
+    
+    <meta name="description" content="Conquer Mount Rinjani with our 2 Days 1 Night Sembalun Summit Expedition. Designed for experienced trekkers seeking a rapid and premium ascent to 3,726m.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#047857', 
+                        brandDark: '#064e3b',
+                        accent: '#d97706', 
+                        accentLight: '#f59e0b',
+                        textMain: '#1f2937',
+                        textMuted: '#4b5563'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-overlay { background: linear-gradient(to bottom, rgba(17, 24, 39, 0.4), rgba(17, 24, 39, 0.9)); }
+        .nav-transition { transition: all 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="font-sans text-textMuted bg-gray-50 antialiased overflow-x-hidden">
+
+    <!-- HEADER / NAVIGATION (Subpage) -->
+    <header id="main-nav" class="fixed top-0 left-0 w-full z-50 nav-transition bg-white shadow-md py-3">
+        <div class="container mx-auto px-6 lg:px-16 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-2 z-50">
+                <div class="text-2xl font-extrabold text-brand tracking-widest drop-shadow-md">
+                    GRAND<span class="text-accentLight">RINJANI</span>
+                </div>
+            </a>
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-textMain">
+                <a href="../index.html" class="hover:text-accentLight transition-colors">HOME</a>
+                <a href="../packages.html" class="hover:text-accentLight transition-colors text-brand border-b-2 border-brand pb-1">PACKAGES</a>
+                <a href="../transport.html" class="hover:text-accentLight transition-colors">TRANSPORT</a>
+                <a href="../blog.html" class="hover:text-accentLight transition-colors">BLOG & TIPS</a>
+                <a href="../about.html" class="hover:text-accentLight transition-colors">ABOUT US</a>
+            </nav>
+            <div class="hidden lg:flex items-center">
+                <a href="https://wa.me/6281234567890" target="_blank" class="bg-accent hover:bg-accentLight text-white px-7 py-2.5 rounded-full font-bold text-sm tracking-wide shadow-lg transition-all">
+                    BOOK NOW
+                </a>
+            </div>
+            <button id="hamburger-btn" class="lg:hidden text-brand z-50 p-2">
+                <i class="ph ph-list text-3xl font-bold" id="menu-icon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 lg:hidden flex flex-col items-center justify-center pt-16 transition-transform duration-300 translate-x-full">
+        <nav class="flex flex-col items-center gap-6 text-textMain font-bold text-xl w-full px-6">
+            <a href="../index.html" class="mobile-link hover:text-brand border-b border-gray-100 w-full text-center py-3">Home</a>
+            <a href="../packages.html" class="mobile-link text-brand border-b border-gray-100 w-full text-center py-3">Packages</a>
+            <a href="../transport.html" class="mobile-link hover:text-brand border-b border-gray-100 w-full text-center py-3">Transport</a>
+            <a href="../blog.html" class="mobile-link hover:text-brand border-b border-gray-100 w-full text-center py-3">Blog & Tips</a>
+            <a href="../about.html" class="mobile-link hover:text-brand border-b border-gray-100 w-full text-center py-3">About Us</a>
+        </nav>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="relative h-[60vh] min-h-[400px] flex items-end pb-16 w-full bg-cover bg-center mt-16" style="background-image: url('https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?q=80&w=2000&auto=format&fit=crop');">
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="container mx-auto px-6 lg:px-16 relative z-20">
+            <a href="../packages.html" class="inline-flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm font-medium mb-6">
+                <i class="ph-bold ph-arrow-left"></i> Back to Packages
+            </a>
+            <br>
+            <span class="bg-accent text-white px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider mb-4 inline-block shadow-sm">
+                Fast Track Route
+            </span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight mb-4 drop-shadow-lg">
+                2 Days 1 Night <br> <span class="text-accentLight">Sembalun Summit</span>
+            </h1>
+            <div class="flex flex-wrap items-center gap-6 text-gray-200 text-sm font-medium">
+                <div class="flex items-center gap-2"><i class="ph-fill ph-clock text-accentLight text-xl"></i> 2 Days, 1 Night</div>
+                <div class="flex items-center gap-2"><i class="ph-fill ph-mountains text-accentLight text-xl"></i> Max Alt: 3,726m</div>
+                <div class="flex items-center gap-2"><i class="ph-fill ph-chart-bar text-accentLight text-xl"></i> Difficulty: Hard</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <section class="py-16">
+        <div class="container mx-auto px-6 lg:px-16 grid grid-cols-1 lg:grid-cols-3 gap-12">
+            
+            <!-- LEFT: Details & Itinerary -->
+            <div class="lg:col-span-2 space-y-12">
+                
+                <!-- Overview -->
+                <div>
+                    <h2 class="text-2xl font-extrabold text-textMain mb-4">Expedition Overview</h2>
+                    <p class="text-textMuted leading-relaxed mb-4 text-justify">
+                        Designed exclusively for seasoned hikers and those on a strict timeline, the 2 Days 1 Night Sembalun package is a thrilling, rapid ascent to the highest peak of Lombok. This route bypasses the crater lake and hot springs, focusing entirely on conquering the majestic 3,726-meter summit.
+                    </p>
+                    <p class="text-textMuted leading-relaxed text-justify">
+                        Your journey begins in the golden savannas of Sembalun, offering vast, panoramic views before transitioning into a steep, challenging climb to the crater rim. Even on our most demanding physical trek, Grand Rinjani guarantees our signature premium service—complete with luxury camping gear and gourmet hot meals to fuel your summit push.
+                    </p>
+                </div>
+
+                <!-- Itinerary -->
+                <div>
+                    <h2 class="text-2xl font-extrabold text-textMain mb-8">Detailed Itinerary</h2>
+                    
+                    <!-- Day 1 -->
+                    <div class="relative pl-8 border-l-2 border-brand/20 mb-10 pb-4">
+                        <div class="absolute -left-2.5 top-0 w-5 h-5 bg-brand rounded-full border-4 border-white shadow"></div>
+                        <h3 class="text-xl font-bold text-textMain mb-2">Day 1: The Grand Savanna Ascent</h3>
+                        <span class="text-accent text-sm font-semibold mb-4 block">Sembalun Village (1,156m) → Sembalun Crater Rim (2,639m)</span>
+                        <p class="text-sm text-textMuted mb-4">We pick you up from your hotel in Lombok and drive to the Rinjani Trekking Center (RTC) in Sembalun. Following registration and a medical check, your trek begins through sweeping, sunlit grasslands.</p>
+                        <ul class="space-y-3 text-textMuted text-sm">
+                            <li class="flex items-start gap-3">
+                                <i class="ph-bold ph-check text-brand mt-0.5"></i>
+                                <span><strong>08:00 AM:</strong> Start trekking to Pos 1 (Pemantauan - 1,300m) and Pos 2 (Tengengean - 1,500m).</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-bold ph-check text-brand mt-0.5"></i>
+                                <span><strong>12:00 PM:</strong> Arrive at Pos 3 (Pada Balong - 1,800m) for a freshly cooked, gourmet hot lunch prepared by our porters.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-bold ph-check text-brand mt-0.5"></i>
+                                <span><strong>01:30 PM:</strong> Face the steepest section of the day, the infamous "Hills of Regret," a continuous incline testing your endurance.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-bold ph-check text-brand mt-0.5"></i>
+                                <span><strong>05:00 PM:</strong> Arrive at the Sembalun Crater Rim (2,639m). Your premium tents are already pitched. Enjoy a magnificent sunset over Segara Anak Lake and a lavish dinner.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <div class="relative pl-8 border-l-2 border-transparent">
+                        <div class="absolute -left-2.5 top-0 w-5 h-5 bg-brand rounded-full border-4 border-white shadow"></div>
+                        <h3 class="text-xl font-bold text-textMain mb-2">Day 2: The Summit Attack & Return</h3>
+                        <span class="text-accent text-sm font-semibold mb-4 block">Crater Rim (2,639m) → Summit (3,726m) → Sembalun Village</span>
+                        <p class="text-sm text-textMuted mb-4">A midnight wake-up call marks the beginning of the most challenging, yet rewarding, part of your journey. You will navigate loose volcanic scree under the light of the stars to reach the peak by dawn.</p>
+                        <ul class="space-y-3 text-textMuted text-sm">
+                            <li class="flex items-start gap-3">
+                                <i class="ph-bold ph-check text-brand mt-0.5"></i>
+                                <span><strong>02:00 AM:</strong> Wake up for a light breakfast consisting of hot tea, coffee, and energy-boosting snacks.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-bold ph-check text-brand mt-0.5"></i>
+                                <span><strong>02:30 AM:</strong> Commence the 3-hour climb to the summit. The final hour requires climbing through deep volcanic sand.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-bold ph-check text-brand mt-0.5"></i>
+                                <span><strong>06:00 AM:</strong> Reach Mount Rinjani's Summit (3,726m). Witness an unparalleled sunrise illuminating the entire island of Lombok, Bali, and Sumbawa.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-bold ph-check text-brand mt-0.5"></i>
+                                <span><strong>07:30 AM:</strong> Descend back to the Crater Rim. Enjoy a heavy, well-deserved second breakfast.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-bold ph-check text-brand mt-0.5"></i>
+                                <span><strong>09:30 AM:</strong> Begin the long descent back down the savanna trails to Sembalun Village, stopping for lunch at Pos 2.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="ph-bold ph-check text-brand mt-0.5"></i>
+                                <span><strong>03:30 PM:</strong> Arrive at Sembalun. Our private transport will be waiting to transfer you to your next destination in Lombok.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Sticky Pricing & Booking -->
+            <div class="lg:col-span-1">
+                <div class="sticky top-28 bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
+                    <h3 class="text-lg font-bold text-textMain mb-2">Expedition Pricing</h3>
+                    <div class="flex items-baseline gap-2 mb-6">
+                        <span class="text-3xl font-extrabold text-brand">From $250</span>
+                        <span class="text-textMuted text-sm">/ person</span>
+                    </div>
+
+                    <div class="mb-8 space-y-4">
+                        <h4 class="font-bold text-textMain text-sm uppercase tracking-wider">Premium Inclusions</h4>
+                        <ul class="space-y-3 text-sm text-textMuted">
+                            <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-accent text-lg mt-0.5"></i> Private return transport (Airport/Senggigi/Kuta/Bangsal)</li>
+                            <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-accent text-lg mt-0.5"></i> 1 Night pre-trek hotel accommodation in Senaru/Sembalun</li>
+                            <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-accent text-lg mt-0.5"></i> Mount Rinjani National Park entrance tickets</li>
+                            <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-accent text-lg mt-0.5"></i> Certified English-speaking mountain guide</li>
+                            <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-accent text-lg mt-0.5"></i> Experienced local porters for camping gear & food</li>
+                            <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-accent text-lg mt-0.5"></i> Luxury camping equipment (Thick mattress, warm sleeping bag, toilet tent)</li>
+                            <li class="flex items-start gap-3"><i class="ph-fill ph-check-circle text-accent text-lg mt-0.5"></i> 3 Gourmet meals a day, plus fresh fruits and unlimited water/hot drinks</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/6281234567890?text=Hello%20Grand%20Rinjani,%20I%20am%20interested%20in%20booking%20the%20Sembalun%202D1N%20Summit%20Expedition." target="_blank" class="flex items-center justify-center gap-2 w-full bg-[#25D366] hover:bg-[#128C7E] text-white font-bold py-4 rounded-xl transition-all shadow-md text-lg">
+                        <i class="ph-fill ph-whatsapp-logo text-2xl"></i> Check Availability
+                    </a>
+                    <p class="text-xs text-center text-gray-400 mt-4">Secure payment • Free date changes • 24/7 Support</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER (Simplified) -->
+    <footer class="bg-gray-900 text-white py-12 border-t-4 border-brand">
+        <div class="container mx-auto px-6 lg:px-16 text-center">
+            <div class="text-2xl font-extrabold text-white tracking-widest mb-4">
+                GRAND<span class="text-accentLight">RINJANI</span>
+            </div>
+            <p class="text-gray-400 text-sm mb-6 max-w-md mx-auto">Elevating your Mount Rinjani expedition with unmatched safety, premium comfort, and profound local expertise.</p>
+            <div class="flex items-center justify-center gap-6 text-sm font-medium">
+                <a href="../packages.html" class="text-gray-400 hover:text-white transition-colors">All Packages</a>
+                <a href="../transport.html" class="text-gray-400 hover:text-white transition-colors">Transport</a>
+                <a href="../about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a>
+            </div>
+            <p class="text-gray-600 text-xs mt-8">&copy; 2026 Grand Rinjani. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('translate-x-full');
+                menuIcon.classList.remove('ph-list');
+                menuIcon.classList.add('ph-x');
+            } else {
+                mobileMenu.classList.add('translate-x-full');
+                menuIcon.classList.remove('ph-x');
+                menuIcon.classList.add('ph-list');
+            }
+        }
+        hamburgerBtn.addEventListener('click', toggleMenu);
+    </script>
+</body>
+</html>
