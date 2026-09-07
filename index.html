@@ -39,7 +39,10 @@
     </script>
     <style>
         .hero-overlay {
-            background: linear-gradient(to bottom, rgba(17, 24, 39, 0.4), rgba(17, 24, 39, 0.9));
+            .hero-overlay {
+            /* Angka 0.7 akan membuat bayangan di paling atas cukup gelap agar teks putih & menu sangat jelas terbaca */
+            background: linear-gradient(to bottom, rgba(17, 24, 39, 0.7) 0%, rgba(17, 24, 39, 0.2) 25%, rgba(17, 24, 39, 0.9) 100%);
+        }
         }
         .nav-transition {
             transition: all 0.3s ease-in-out;
