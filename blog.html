@@ -37,9 +37,12 @@
             }
         }
     </script>
-    <style>
+        <style>
         .hero-overlay {
-            background: linear-gradient(to bottom, rgba(17, 24, 39, 0.6), rgba(17, 24, 39, 0.9));
+            .hero-overlay {
+            /* Angka 0.7 akan membuat bayangan di paling atas cukup gelap agar teks putih & menu sangat jelas terbaca */
+            background: linear-gradient(to bottom, rgba(17, 24, 39, 0.7) 0%, rgba(17, 24, 39, 0.2) 25%, rgba(17, 24, 39, 0.9) 100%);
+        }
         }
         .nav-transition {
             transition: all 0.3s ease-in-out;
@@ -51,22 +54,21 @@
         #mobile-menu.open {
             transform: translateX(0);
         }
-        .line-clamp-3 {
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;  
-            overflow: hidden;
-        }
     </style>
 </head>
 <body class="font-sans text-textMuted bg-gray-50 antialiased overflow-x-hidden">
 
     <!-- HEADER / NAVIGATION -->
-    <header id="main-nav" class="fixed top-0 left-0 w-full z-50 nav-transition bg-white shadow-md py-3">
+    <header id="main-nav" class="fixed top-0 left-0 w-full z-50 nav-transition bg-transparent py-4">
         <div class="container mx-auto px-6 lg:px-16 flex items-center justify-between">
             
-            <a href="index.html" class="flex items-center gap-2 z-50">
-                <div class="text-2xl font-extrabold text-brand tracking-widest drop-shadow-md" id="logo-text">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3 z-50 group">
+                <!-- Gambar Logo Ikon -->
+                <img src="assets/logo.png" alt="Logo Grand Rinjani" class="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" id="logo-img">
+                
+                <!-- Teks Logo dengan Font Montserrat -->
+                <div class="text-xl md:text-2xl font-extrabold text-brand tracking-widest drop-shadow-sm" id="logo-text">
                     GRAND<span class="text-accentLight">RINJANI</span>
                 </div>
             </a>
