@@ -37,35 +37,41 @@
             }
         }
     </script>
-    <style>
-        .hero-overlay {
-            background: linear-gradient(to bottom, rgba(17, 24, 39, 0.6), rgba(17, 24, 39, 0.9));
-        }
-        .nav-transition {
-            transition: all 0.3s ease-in-out;
-        }
-        #mobile-menu {
-            transition: transform 0.4s ease;
-            transform: translateX(100%);
-        }
-        #mobile-menu.open {
-            transform: translateX(0);
-        }
-    </style>
-</head>
-<body class="font-sans text-textMuted bg-gray-50 antialiased overflow-x-hidden">
-
-    <!-- HEADER / NAVIGATION (Solid Background Default for Inner Pages) -->
-    <header id="main-nav" class="fixed top-0 left-0 w-full z-50 nav-transition bg-white shadow-md py-3">
-        <div class="container mx-auto px-6 lg:px-16 flex items-center justify-between">
+                <style>
+                    .hero-overlay {
+                        .hero-overlay {
+                        /* Angka 0.7 akan membuat bayangan di paling atas cukup gelap agar teks putih & menu sangat jelas terbaca */
+                        background: linear-gradient(to bottom, rgba(17, 24, 39, 0.7) 0%, rgba(17, 24, 39, 0.2) 25%, rgba(17, 24, 39, 0.9) 100%);
+                    }
+                    }
+                    .nav-transition {
+                        transition: all 0.3s ease-in-out;
+                    }
+                    #mobile-menu {
+                        transition: transform 0.4s ease;
+                        transform: translateX(100%);
+                    }
+                    #mobile-menu.open {
+                        transform: translateX(0);
+                    }
+                </style>
+            </head>
+            <body class="font-sans text-textMuted bg-gray-50 antialiased overflow-x-hidden">
             
-            <!-- Logo -->
-            <a href="index.html" class="flex items-center gap-2 z-50">
-                <div class="text-2xl font-extrabold text-brand tracking-widest drop-shadow-md" id="logo-text">
-                    GRAND<span class="text-accentLight">RINJANI</span>
-                </div>
-            </a>
-
+                <!-- HEADER / NAVIGATION -->
+                <header id="main-nav" class="fixed top-0 left-0 w-full z-50 nav-transition bg-transparent py-4">
+                    <div class="container mx-auto px-6 lg:px-16 flex items-center justify-between">
+                        
+                        <!-- Logo -->
+                        <a href="index.html" class="flex items-center gap-3 z-50 group">
+                            <!-- Gambar Logo Ikon -->
+                            <img src="assets/logo.png" alt="Logo Grand Rinjani" class="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" id="logo-img">
+                            
+                            <!-- Teks Logo dengan Font Montserrat -->
+                            <div class="text-xl md:text-2xl font-extrabold text-brand tracking-widest drop-shadow-sm" id="logo-text">
+                                GRAND<span class="text-accentLight">RINJANI</span>
+                            </div>
+                        </a>
             <!-- Desktop Menu -->
             <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-textMain" id="desktop-links">
                 <a href="index.html" class="hover:text-accentLight transition-colors pb-1">HOME</a>
